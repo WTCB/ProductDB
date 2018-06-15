@@ -1,0 +1,18 @@
+Delphine,
+ 
+In bijlage vind je 7 bestanden die samen de totale export zijn van het PIM systeem.
+ 
+De effectieve product data vind je in export_products.xlsx. Per product zie je hier de waarden per attribuut.
+ 
+De attributen en attribuutopties (bijvoorbeeld bij Multiple choice attributen) vind je in respectievelijk export_attributes.xlsx en export_attribute_options.xlsx.
+ 
+Een product behoort tot zowel een categorie (export_categories.xlsx) als tot een familie (export_families.xlsx). De categorie dient als boomstructuur voor zowel het PIM als de product search op de website. De familie zorgt ervoor dat de juiste attributen getoond worden in het PIM systeem als een product aangemaakt wordt. Op die manier zal je als je een terrasoverkapping wil aanmaken geen rekening moeten houden met velden zoals “Fysische doorlaat in %”.
+ 
+De variant group file (export_variant_group.xlsx) groepeert bepaalde producten. Bijvoorbeeld de Endura Delta is een variant groep met daaronder alle varianten van de Endura Delta. Het voordeel hiervan is dat in de product search eerste gekozen wordt voor een Endura Delta en daarna kunnen dan de verschillen uitgelegd worden tussen de verschillende types.
+ 
+Tot slot heb je ook nog de translations export (export_translations.xlsx). Deze export is puur voor extra functies in de product search, zoals bijvoorbeeld de extra informatie die je kan zien als je op het blauwe icoon duwt naast een filter.  
+ 
+Normaal gezien heb ik jou ook een login gegeven voor het PIM systeem. Hiermee kan je eigenlijk zelf deze exports gaan trekken. Ik kan je altijd eens tonen hoe en waar je dit moet doen.
+ 
+ 
+Mvg,

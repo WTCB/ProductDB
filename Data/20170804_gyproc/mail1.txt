@@ -1,0 +1,28 @@
+Goede middag,
+ 
+
+Even ter aanvulling op de meeting gisteren:
+GS1 is een vzw die wereldwijd actief is en heeft naast bv zijn activiteiten ivm EAN, ook een entiteit rond master data: ze zorgen voor een gestructureerd model waar fabrikanten informatie kunnen invullen en waar de retailers informatie kunnen uithalen.
+Voor bouwmaterialen zijn de grote ketens hier al actief mee bezig.
+ 
+
+Hun data structuur is wereldwijd dezelfde.
+De producten zijn onderverdeeld in ‘bricks’ en elke brick heeft een specifieke set van attributen die daaraan zijn toegekend: voor de bouwmaterialen heb ik hun lijst met attributen ook toegevoegd. Ze hebben die voor ons enkel in het Nederlands opgemaakt, maar ze kunnen zeker Frans aanleveren, en andere talen via hun wereldwijd netwerk.
+Als de fabrikant wil kan hij ook info ivm de Safety Data Sheets aan hen bezorgen, ze hebben specialisten in dienst die die nakijken en goedkeuren.
+ 
+
+We werken nu nog niet met hen, maar willen begin volgend jaar wel starten.
+ 
+
+Onze contactpersoon bij GS1 is Sarah Lard, kaartje in bijlage. Misschien interessant om eens contact mee op te nemen.
+ 
+
+ 
+
+Met vriendelijke groeten - Meilleures salutations
+Els Moeyersons
+Quality Service Manager
+ 
+T +32 (0)3 360 25 30
+F +32 (0)3 360 25 20
+Els.Moeyersons@saint-gobain.com

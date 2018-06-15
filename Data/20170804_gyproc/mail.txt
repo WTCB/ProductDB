@@ -1,0 +1,23 @@
+Goede middag,
+ 
+In bijlage de beloofde lijst (‘Kenmerken’) met onze karakteristieken op product- en op systeemniveau, met telkens ook aangegeven voor welk type producten of systemen die eigenschappen relevant zijn.
+ 
+Jullie zullen zien dat er op productniveau heel wat velden zijn die zeker niet in een BIM model moeten komen, maar die zijn in onze PIM wel belangrijk voor bv. onze prijslijst, onze interne ISO spec’s (naar leverancier) etc.
+Bij systemen zullen er meer velden relevant zijn in BIM (lijkt me).
+Voor alle karakteristieken is aangegeven welk veldtype dit is in onze database.
+ 
+ 
+Ik heb ook de lijst toegevoegd waar GS1 mee werkt: hierin staan de kenmerken ook met Engelse en Franse benaming en uitleg.
+ 
+ 
+Als jullie nog verdere vragen hebben, kunnen jullie me steeds contacteren.
+ 
+Met vriendelijke groeten - Meilleures salutations
+Els Moeyersons
+Quality Service Manager
+ 
+T +32 (0)3 360 25 30
+F +32 (0)3 360 25 20
+Els.Moeyersons@saint-gobain.com
+www.gyproc.be
+ 

@@ -1,0 +1,23 @@
+Goede middag Pieter,
+ 
+In bijlage de aangepaste lijsten, met de karakteristieken waarvan we denken die op productniveau en op systeemniveau interessant zijn in een BIM model; en een overzicht van alle producten in onze prijslijst en alle systemen op onze website.
+Ik heb op de lijst met de karakteristieken ook steeds vermeld welk type veld (datum, integer, tekst, dropdown) dit is in de database. Ik veronderstel dat bv. de dropdown niet opnieuw moet opgebouwd worden in jullie database, maar dat jullie de waarden gewoon overnemen.
+ 
+Bij de karakteristieken staat ook steeds een kolom met een nummer (titel = ‘Line’): deze verwijst naar de lijnnummer in onze databases. Als er later een export-import of directe link wordt gelegd, is dit nummer handig om naar de juiste eigenschap te verwijzen, dus daarom heb ik deze mee opgenomen in de overzichten.
+De kleuraanduidingen heb ik laten staan, maar hebben geen betekenis voor jullie
+We hebben voorlopig “(blanco)” ingevuld voor velden die leeg moeten blijven in de database. Dit is om eenvoudig na te kunnen kijken welke velden er nog moeten ingevuld worden. In de uiteindelijke database online zal er dus geen “(blanco)” meer staan.
+ 
+Op systeemniveau is onze unieke referentie de systeemcode, maar je zal zien dat er mogelijkheid moet zijn om met varianten te werken: bv een voorzetwand kan akoestisch getest worden in combinatie met verschillende basiswanden => de systeemcode voor onze wand is dezelfde, maar er moeten verschillende akoestische resultaten aan gekoppeld worden. Daarom werken we met varianten, aangeduid met _1, _2 ed na de systeemcode.
+ 
+ 
+Als je nog specifieke IT Technische vragen hebt ivm onze databases, mag je die doorsturen, dan communiceer ik die verder naar onze leverancier. Als je ze al in het Engels kan zetten, dan kan ik geen foute vertaling/interpretatie maken.
+ 
+Als je nog verdere vragen hebt, kan je me steeds contacteren.
+(Vakantie op 14 en 15 aug, en van 1 tem 10 sept.)
+ 
+ 
+Met vriendelijke groeten/Meilleures salutations
+Els Moeyersons
+Quality Service Manager
+Tel.: +32 3 360 25 30
+www.gyproc.be

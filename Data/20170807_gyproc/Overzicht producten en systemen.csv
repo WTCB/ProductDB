@@ -1,0 +1,46 @@
+Category NL;Characteristic NL;Characteristic FR;Characteristic EN;Line;Unit;Field type;;Pleister;Primer;Dagkant;Plaat;Tegel;Perfo plaat;Isolatiepaneel;Toebehoren;Kooflijst;GypForm;GypArt;GT Instant;Voegprod;Profiel;Hanger;Luik;Schroef;Lijm
+;Artikelnummer;Code produit;Product code;2;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;Status;Etat;Status;6;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;PIB naam NL;Nom FIP NL;PIS name NL;300;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;PIB naam FR;Nom FIP FR;PIS name FR;345;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;PIB ondertitel NL;FIP sous-titre NL;PIS subtitle NL;301;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;PIB ondertitel FR;FIP sous-titre FR;PIS subtitle FR ;302;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Algemeen;Oud artikelnummer;Code produit ancien;Old article number;289;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Beschrijving;Benaming prijslijst NL;Dénomination Liste de Prix NL;Designation PL NL;25;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Beschrijving;Benaming prijslijst FR;Dénomination Liste de Prix FR;Designation PL FR;26;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Beschrijving;Samenstelling NL;Composition NL;Composition NL;169;;HTML;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Beschrijving;Samenstelling FR;Composition FR;Composition FR;170;;HTML;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Productnorm;Norme produit;Product standard;38;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Type kort;Type court;Type Short;39;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Type lang NL;Type long NL;Type Long NL;40;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Type lang FR;Type long FR;Type Long FR;41;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Reactie bij brand;Réaction au feu;Reaction to fire;49;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Normen;Reactie bij brand Norm;Réaction au feu Norme;Reaction to fire Standard;50;;Drop down;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+DOP;DOP Nummer;Numéro DOP;DOP Number;56;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Vorm en afm;Kantvorm;Forme du bord;Edge profile;92;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Vorm en afm;Dikte;Epaisseur;Thickness;94;mm;Text monolanguage;;n;n;x;x;x;x;x;x;n;x;n;x;n;x;x;x;x;n
+Vorm en afm;Breedte;Largeur;Width;95;mm;Integer;;n;n;x;x;x;x;x;x;x;x;n;x;n;x;x;x;x;n
+Vorm en afm;Lengte;Longueur;Length;96;mm;Integer;;n;n;x;x;x;x;x;x;x;x;n;x;n;x;x;x;x;n
+Vorm en afm;Dikte isolatie;Epaisseur isolation;Thickness Isolation;100;mm;Integer;;n;n;x;x;n;n;x;n;n;n;n;x;n;n;n;n;n;n
+Vorm en afm;Totale dikte;Epaisseur totale;Total thickness;102;mm;Text monolanguage;;n;n;x;x;n;n;x;n;n;n;n;x;n;n;n;x;n;n
+Gewicht;Oppervlaktegewicht;Poids surfacique;Areal weight;131;kg/m²;Text monolanguage;;n;n;x;x;x;x;x;n;n;x;n;x;n;n;n;n;n;n
+Thermisch;Thermische geleidbaarheid l;Conductivité thermique l;Thermal conductivity l;150;W/mK;Decim (10,2);;x;n;x;x;x;x;x;x;x;x;x;n;x;x;x;n;x;x
+Thermisch;Thermische geleidb. isolatie l;Conductivité thermique isolation l;Thermal conductivity Isolation l;151;W/mK;Decim (10,3);;n;n;x;x;x;x;x;x;n;n;n;n;n;n;n;n;n;n
+Thermisch;Lineaire uitzettings-coëfficiënt tgv temp;Coefficient de dilatation linéaire sous l'influence de la temp.;Linear coefficient of expansion due to temperature;157;m/(m.K);Text monolanguage;;n;n;x;x;x;x;x;n;x;x;x;n;x;x;n;n;n;n
+Thermisch;Lin.uitz.temp. VW NL;Coeff. dilat. lin. sous l'influence de temp. Condit NL;Linear coeff. expansion temp Condit NL;158;;Text multilanguage;;n;n;x;x;x;x;x;n;x;x;x;n;x;x;n;n;n;n
+Thermisch;Lin.uitz.temp. VW FR;Coeff. dilat. lin. sous l'influence de temp. Condit FR;Linear coeff. expansion temp Condit FR;159;;Text multilanguage;;n;n;x;x;x;x;x;n;x;x;x;n;x;x;n;n;n;n
+Hygroscopisch;Waterdampdiffusie-weerstandsgetal ?;Facteur de résistance à la diffusion de la vapeur d'eau ?;Water vapour resistance factor ?;161;;Integer;;x;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;x
+Hygroscopisch;Waterdampdiffusie-weerst. isolatie ?;Facteur résist. diffusion vapeur d'eau Isolation ?;Water vapour resistance factor Isolation ?;162;;Integer;;x;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;x
+Hygroscopisch;Waterdampdiffusie-weerstand ?d;Résistance à la diffusion de la vapeur d'eau ?d;Water vapour resistance ?d;163;m;Text monolanguage;;x;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;x
+Hygroscopisch;Lineaire uitzettings-coëfficiënt tgv RV;Coefficient de dilatation linéaire sous l'influence de l'humidité relative;Linear coefficient of expansion due to RH;164;m/(m.%R.V.);Text monolanguage;;n;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;n
+Hygroscopisch;Lin.uitz.vocht VW NL;Coeff. dilat. lin. sous l'influence de HR. Condit NL;Linear coeff. expansion RH Condit NL;165;;Text multilanguage;;n;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;n
+Hygroscopisch;Lin.uitz.vocht VW FR;Coeff. dilat. lin. sous l'influence de HR. Condit FR;Linear coeff. expansion RH Condit FR;166;;Text multilanguage;;n;n;x;x;x;x;x;x;n;x;x;n;x;n;n;n;n;n
+Prijslijst;Basishoeveelheidseenheid;Unité de quantité de base NL;Base unit of measure NL;240;;Text multilanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Prijslijst;EAN;EAN;EAN;267;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Prijslijst;EAN Eenheid;EAN Unité;EAN Unit;390;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+Prijslijst;Intrastatnummer;Numéro Intrastat;Intrastat number;268;;Text monolanguage;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+URL;DOP URL NL;DOP URL NL;DOP URL NL;;;;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+URL;DOP URL FR;DOP URL FR;DOP URL FR;;;;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+URL;PIB URL NL;PIB URL NL;PIB URL NL;;;;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+URL;PIB URL FR;PIB URL FR;PIB URL FR;;;;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
+URL;Image;Image;Image;;;;;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x;x
