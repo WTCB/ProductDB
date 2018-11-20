@@ -12,7 +12,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>ProdCSVDataLoader</name>
   <description>project that loads a bunch of sample data (e.g. CSV files from relatics) and pushes them into a local neo4j data store</description>
-  
+
   <dependencies>
     
     <!-- Spring Boot 
@@ -22,7 +22,7 @@
     </dependency>
 	-->
 
-    <!-- Spring Neo4J 
+    <!-- Spring Neo4J
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-neo4j-rest</artifactId>
@@ -33,7 +33,7 @@
 	<dependency>
 		<groupId>org.neo4j.driver</groupId>
 		<artifactId>neo4j-java-driver</artifactId>
-		<version>1.0.0</version>
+		<version>1.6.1</version>
 	</dependency>
 	
   </dependencies>

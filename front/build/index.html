@@ -1,0 +1,621 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="http://neo4j-contrib.github.io/developer-resources/language-guides/assets/css/main.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+      <!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+          function collapse(){
+            setTimeout(function(){
+              $.fn.matchHeight._update();
+            }, 250);  // without the delay the uodate is applied before the filter changes its height
+          }
+
+          /* matchHeight example*/
+          $(function() {
+            $('.target-items').each(function() {
+              $(this).children('.item-1').matchHeight({
+                target: $(this).find('.item-0')
+              });
+            });
+          });
+    </script>
+
+    <title>ProductDB</title>
+</head>
+
+<body ng-app="myApp">
+    <!-- Definition of the navbar -->
+    <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li id="gebouwen" class="nav-item active dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">Gebouwen</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Onderbouw</a>
+                  <a class="dropdown-item" href="#">Bovenbouw</a>
+                  <a class="dropdown-item" href="#">Dak</a>
+                  <a class="dropdown-item" href="#">Gevel</a>
+                  <a class="dropdown-item" href="#">Binnenafwerking</a>
+                  <a class="dropdown-item" href="#">Fluïda</a>
+                  <a class="dropdown-item" href="#">Elektro</a>
+                  <a class="dropdown-item" href="#">Schilder</a>
+                  <a class="dropdown-item" href="#">Omgeving</a>
+                  <!-- may be define with a forall, depending on the model, the varaiable created can be used for an adaptative menu-->
+                </div>
+              </li>
+              <li id="Infrastructuure" class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">Infrastructuur</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Materialen</a>
+                  <a class="dropdown-item" href="#">Voorbereidende werken en grondwerken</a>
+                  <a class="dropdown-item" href="#">Onderfunderingen en funderigen</a>
+                  <a class="dropdown-item" href="#">Verhardingen</a>
+                  <a class="dropdown-item" href="#">Riolering en afvoer van water</a>
+                  <a class="dropdown-item" href="#">Lijnvormige elementer</a>
+                  <a class="dropdown-item" href="#">Allerhande werken</a>
+                  <a class="dropdown-item" href="#">Signalisatie</a>
+                  <a class="dropdown-item" href="#">Groenaanleg en onderhoud</a>
+                  <a class="dropdown-item" href="#">Onderhouds- en herstellingswerken</a>
+                  <a class="dropdown-item" href="#">Werken aan waterlopen</a>
+                  <a class="dropdown-item" href="#">Metingen en proeven</a>
+                </div>
+              </li>
+              <li id="materieel" class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">Materieel</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Beton- & werfmachines</a>
+                  <a class="dropdown-item" href="#">Bouwmachines</a>
+                  <a class="dropdown-item" href="#">Diamant</a>
+                  <a class="dropdown-item" href="#">Energie</a>
+                  <a class="dropdown-item" href="#">Handgereedschap</a>
+                  <a class="dropdown-item" href="#">Handgereedschap (elektrisch)</a>
+                  <a class="dropdown-item" href="#">Hijsmaterieel & toebehoren</a>
+                  <a class="dropdown-item" href="#">Meetapparatuur</a>
+                  <a class="dropdown-item" href="#">Steigermaterieel</a>
+                  <a class="dropdown-item" href="#">Stut- & stelmaterieel</a>
+                  <a class="dropdown-item" href="#">Tegel- en vloerbewerking</a>
+                  <a class="dropdown-item" href="#">Transport & opslag</a>
+                  <a class="dropdown-item" href="#">Werfinrichting</a>
+                  <a class="dropdown-item" href="#">Werkkledij</a>
+                </div>
+              </li>
+              <li id="diensten" class="nav-item dropdown">
+                <a class="nav-link" href="#" data-toggle="dropdown">Diensten</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Beroepsverenigingen</a>
+                  <a class="dropdown-item" href="#">Certificering en Keurmerken</a>
+                  <a class="dropdown-item" href="#">Luchtdichtheidsmetingen</a>
+                  <a class="dropdown-item" href="#">Onderzoekscentra</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                  <form id="DB" class="form-inline" ng-controller="dbController">
+                    <label class="mr-sm-2" style="color:white; font-size:18px">Databank</label>
+                    <select class="form-control" ng-model="selectedDB" ng-click="db()" style="text:align-right;"> <!--multiple size="1"> style="width: 70px"> multiple size="1">-->
+                      <option selected disabled>Kiezen</option>
+                      <option ng-repeat="db in listDB" value="{{db.value}}">{{db.name}}</option>
+                      <!-- <option value="myOwn" data-toggle="collapse" data-target="#DBform">My own</option> -->
+                      <!-- <option value="myOwn">
+                        <div class="btn-group dropright">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          My Own database
+                        </button>
+                        <div class="dropdown-menu"> -->
+                          <!-- Dropdown menu links -->
+                          <!-- <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="DBurl">URL</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="DBurl">
+                          </div>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="DBusername">User</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="DBusername">
+                          </div>
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="DBpassword">Password</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="DBpassword">
+                          </div>
+                        </div>
+                      </div>
+                      </option> -->
+                    </select>
+                    <!-- <div class="dropdown show">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                      Select database(s)
+                    </button>
+                    <div class="dropdown-menu"> -->
+                      <!-- Dropdown menu links -->
+                      <!-- <div class="dropdown-item" ng-repeat="db in listDB">
+                            <input class="form-check-input" type="checkbox" ng-click="db({{db.value}})" ng-model="selectedDB">{{db.name}}
+                          </div>
+                      </div>
+                    </div> -->
+                  </form>
+                </li>
+                  <!-- <div class="collapse" id="DBform">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="DBurl">URL</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="URL" aria-label="URL" aria-describedby="DBurl">
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="DBusername">User</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="DBusername">
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="DBpassword">Password</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="DBpassword">
+                    </div>
+                  </div> -->
+            </ul>
+            <ul class="nav navbar-nav">
+                <li>
+                    <form role="search" class="form-inline dropdown" id="search">
+                        <input type="text" placeholder="Zoek een bouwproduct" class="form-control" name="search" data-toggle="dropdown" id="myInput">
+                        <div class="dropdown-menu" id="propositions">
+                        </div>
+                        <button class="btn btn-default" type="submit">Zoek</button>
+                    </form>
+                    <!-- <mat-autocomplete>
+                      <mat-option *ngFor="let option of options" [value]="option" id="options">
+                        {{ option }}
+                      </mat-option>
+                    </mat-autocomplete> -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    </br>
+    <div class="container-fluid">
+      <!-- Show selected categories -->
+      <div class="row" id="top_menu">
+        <!-- 3 levels, the last selected show the selected products-->
+      </div>
+      </br>
+
+      <div class="row">
+          <h4 class="col-md-3">FILTER</h4>
+          <!-- <div class="panel-heading"> -->
+          <h4>BESCHIKBARE PRODUCTEN</h4>
+      </div>
+
+      <div class="row target-items">
+
+          <!-- Enable to choose a product selecting its properties-->
+          <div id="propertiesSearch" class="col-md-3">
+              <!-- 1 form for each propertie
+                    double forall?? -->
+              <div id="accordion" class="item item-0">
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseOne" onclick="collapse()">
+                        Geometricsche data
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                      <div class="card-body">
+                        <!-- can be changed with a double forall?? -->
+                        <!-- <div ng-app="geom" ng-controller="Dikte">
+                          Dikte
+                          <select ng-model="selectedDikte" ng-options="x for x in Dikte">
+                          </select>
+                        </div>
+                        <div ng-app="geom" ng-controller="Lengte">
+                          Lengte
+                          <select ng-model="selectedLengte" ng-options="x for x in Lengte">
+                          </select>
+                        </div>
+                        <div ng-app="geom" ng-controller="Breedte">
+                          Breedte
+                          <select ng-model="selectedBreedte" ng-options="x for x in Breedte">
+                          </select>
+                        </div>
+                        <div ng-app="geom" ng-controller="Haaksheid">
+                          Haaksheid
+                          <select ng-model="selectedHaaksheid" ng-options="x for x in Haaksheid">
+                          </select>
+                        </div>
+                        <div ng-app="geom" ng-controller="Vlakheid">
+                          Vlakheid
+                          <select ng-model="selectedVlakheid" ng-options="x for x in Vlakheid">
+                          </select>
+                        </div>
+                        <div ng-app="geom" ng-controller="Materiaal">
+                          Materiaal
+                          <select ng-model="selectedMateriaal" ng-options="x for x in Materiaal">
+                          </select>
+                        </div> -->
+                        <!-- <div class="dropdown">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="Dikten">
+                            Dikte<span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" id="Dikte">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> -->
+                              <!--<li onclick="dikte([0,0.5])"><a class="dropdown-item button" href="#"><div class="Dvalue">0-0.5</div></a></li>
+                              <li><a class="dropdown-item button" href="#"><div class="Dvalue">0.5-1</div></a></li>
+                              <li><a class="dropdown-item button" href="#"><div class="Dvalue">1-5</div></a></li>
+                              <li><a class="dropdown-item button" href="#"><div class="Dvalue">5-10</div></a></li>
+                              <li><a class="dropdown-item button" href="#"><div class="Dvalue">10-20</div></a></li>
+                              <li><a class="dropdown-item button" href="#"><div class="Dvalue">20-50</div></a></li>
+                          </ul>
+                      </div> -->
+                        <form id="Dikte" class="form-inline" ng-controller="geomController">
+                          <label class="mr-sm-2">Dikte</label>
+                          <select class="form-control" ng-model="selectedDikte" ng-click="dikte()" style="text:align-right;"> <!--style="width: 70px"> multiple size="1">-->
+                            <option selected>Kiezen</option>
+                            <option ng-repeat="dikte in dikten" value="{{dikte.value}}">{{dikte.num}}</option>
+                          </select>
+                        </form>
+                        <form id="Lengte" class="form-inline" ng-controller="geomController">
+                          <label class="mr-sm-2">Lengte</label>
+                          <select class="form-control" ng-model="selectedLengte" ng-click="lengte()" style="text:align-right;"> <!--style="width: 70px"> multiple size="1">-->
+                            <option selected>Kiezen</option>
+                            <option ng-repeat="lengte in lengten" value="{{lengte.value}}">{{lengte.num}}</option>
+                          </select>
+                        </form>
+                        <form id="Breedte" class="form-inline" ng-controller="geomController">
+                          <label class="mr-sm-2">Breedte</label>
+                          <select class="form-control" ng-model="selectedBreedte" ng-click="breedte()" style="text:align-right;"> <!--style="width: 70px"> multiple size="1">-->
+                            <option selected>Kiezen</option>
+                            <option ng-repeat="breedte in breedten" value="{{breedte.value}}">{{breedte.num}}</option>
+                          </select>
+                        </form>
+                        <div id="Haaksheid">
+                          Haaksheid
+                          <select id="selectedHaaksheid">
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseTwo" onclick="collapse()">
+                        Thermische prestaties
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <!-- <div ng-app="geom" ng-controller="Geleidbaarheid">
+                          Geleidbaarheid
+                          <select ng-model="selectedGeleidbaarheid" ng-options="x for x in Geleidbaarheid">
+                          </select>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseThree" onclick="collapse()">
+                        Akoestische prestaties
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Lorem ipsum..
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseFour" onclick="collapse()">
+                        Brand prestaties
+                      </a>
+                    </div>
+                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Lorem ipsum..
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseFive" onclick="collapse()">
+                        Mechanische prestaties
+                      </a>
+                    </div>
+                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Lorem ipsum..
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseSix" onclick="collapse()">
+                        Hygroscopische prestaties
+                      </a>
+                    </div>
+                    <div id="collapseSix" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        Lorem ipsum..
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link text-dark" data-toggle="collapse" href="#collapseSeven" onclick="collapse()">
+                        Attesten
+                      </a>
+                    </div>
+                    <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+          </div>
+
+          <!-- Show results of the research -->
+          <div class="col-md-9 item item-1" style="overflow:auto">
+              <div class="items-container nested-items">
+                  <div class="row results" id="results">
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      </br>
+
+      <!-- Product details -->
+      <div class="row" id=section1 style="background:#f9f2ec">
+        </br>
+
+
+          <!-- Pictures -->
+          <div class="col-md-4">
+
+              <h4>PRODUCT IDENTIFIERS</h4>
+              </br>
+
+            <img src="" class="well" id="picture" alt="product" style="max-height:400px; max-width:275px">
+            <!-- can be changed by a carousel if there are several pictures-->
+          </div>
+
+          <!-- Information on the product -->
+          <div class="col-md-5"> <!--ng-controller="myController"-->
+              <h5 id="prodName">Productnaam</h5>
+              <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <td>Unieke ref.:</td>
+                  <td id="prodRef"></td>
+                </tr>
+                  <td>Fabrikant:</td>
+                  <td id="prodFabr"></td>
+                </tr>
+                  <td>benamingPrijslijstNL:</td>
+                  <td id="benamingPrijslijstNL"></td>
+                  <!-- <td>Product familie:</td>
+                  <td></td>
+                </tr>
+                  <td>Product groep:</td>
+                  <td></td>
+                </tr>
+                <td>Publicatiedatum:</td>
+                <td></td>
+                </tr>
+                  <td>Editie nummer:</td>
+                  <td></td> -->
+                </tr>
+                  <td>Type:</td>
+                  <td id="prodType"></td>
+                </tr>
+                  <td>Keurmerk:</td>
+                  <td id="prodLabel"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Provider information -->
+          <div class="col-md-3">
+            <img src="" alt="logo of the company" id="logo">
+            <h4 id="compName">Bedrijfsnaam</h4>
+            <p id="compAddress"></p>
+
+            <button type="button" class="btn btn-block" data-toggle="collapse" data-target="#phone">Tel</button>
+            <div id="phone" class="collapse text-center"></div>
+            </br>
+            <button type="button" class="btn btn-block" data-toggle="collapse" data-target="#mail">E-mail</button>
+            <div id="mail" class="collapse text-center"></div>
+            </br>
+            <a class="btn btn-info btn-block" href="" id="website">Website</a>
+            </br>
+
+            <div class="text-center">
+
+            <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#modalGM">Zoek Dealer</button>
+
+            </div>
+
+            <!--Modal: Name-->
+            <div class="modal fade" id="modalGM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+
+                <!--Content-->
+                <div class="modal-content">
+
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <!--Google map-->
+                        <div id="map-container-2" class="z-depth-1-half" style="height: 500px">
+                          <iframe height="500" width="100%" scrolling="no" frameborder="0" style="border:0" allowfullscreen src="https://www.google.com/maps/d/embed?mid=1_EmgcuG7yjmC0_9J4VvrQRjGGJfWjOt1&z=7&ll=52.75,1.5"></iframe>
+                        </div>
+
+                    </div>
+
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-outline-primary btn-md" data-dismiss="modal">Close <i class="fa fa-times ml-1"></i></button>
+
+                    </div>
+
+                </div>
+                <!--/.Content-->
+
+            </div>
+            </div>
+            <!--Modal: Name-->
+            </br>
+            <button type="button" class="btn btn-dark btn-block">Voeg toe aan uw bibliotheek</button>
+          </div>
+
+      </div>
+      </br>
+
+      <div class="row">
+          <div class="col-md-12">
+            <h4>PRESTATIES</h4>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-12">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#descr">Beschrijving</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#chara">Eigenschappen</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#downl">Download</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#class">Klasse</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane container active" id="descr">
+                      <div id="prodDescription">Beschrijving</div>
+                  </div>
+                  <div class="tab-pane container fade" id="chara">
+                    <table id="properties" class="table">
+                        <thead>
+                        <tr>
+                            <th>Eigenschap</th>
+                            <th>Waarde</th>
+                            <th>Eenheid</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane container fade" id="downl">
+                    <table id="downloads" class="table">
+                        <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>URL</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane container fade" id="class">
+                    <table id="classe" class="table">
+                        <thead>
+                        <tr>
+                            <th>Norm</th>
+                            <th>Waarde</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+
+            </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-12">
+              <h4>CONTACT</h4>
+              <p>Meer informatie: contacteer BBRI.</p>
+          </div>
+      </div>
+
+      <button onclick="topFunction()" id="myBtn" title="Go to top" style="display:none; position: fixed; right: 30px; bottom: 20px; border: none; outline: none; background-color: black; color: white; cursor: pointer; padding: 15px; border-radius: 10px; font-size: 18px;">Top</button>
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+<!--<script type="text/javascript" src="../../node_modules/neo4j-driver/lib/browser/neo4j-web.min.js"></script>-->
+    <script type="text/javascript" src="app.js"></script></body>
+
+<script>
+  // functions for the button to go to the top of the page
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+
+  function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#results *").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      $("#propositions *").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
+
+  function sortAZ(){
+    console.log("sortaz");
+    $("#results *").sort();
+  };
+</script>
+
+
+</body>
+</html>
