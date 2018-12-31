@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gs-accessing-neo4j-data-rest.iml" filepath="$PROJECT_DIR$/gs-accessing-neo4j-data-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/techdat.iml" filepath="$PROJECT_DIR$/techdat.iml" />
     </modules>
   </component>
 </project>

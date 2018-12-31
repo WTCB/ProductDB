@@ -9,21 +9,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.text.Normalizer;
 
 import org.neo4j.driver.v1.Session;
 
 import be.pauwel.pi.DataLoader;
 
+
 public class DataLoader {
 	
-	private static String path = "C:\\Users\\pipauwel\\Desktop\\Git\\pipauwel\\ProductDB\\src\\main\\resources";
-
 	public DataLoader() { }
 
 	public static void main(String[] args) {
 		DataLoader l = new DataLoader();
-		Config.path = path;
 		try {
 			Config.getData();
 		} catch (IOException e) {
@@ -33,12 +32,12 @@ public class DataLoader {
 		l.emptyDatabase();
 		
 		l.parseGyprocProducten();
-		l.reconfigureProductProperties();
+		//l.reconfigureProductProperties();
 		
 		//l.parseRensonProducten();
 		
-		l.loadOtherProducten();
-		l.loadTIATAB();
+		//l.loadOtherProducten();
+		//l.loadTIATAB();
 		
 		l.loadPropertiesInDB();
 	}
@@ -47,9 +46,9 @@ public class DataLoader {
 		BufferedReader br = null;
 		String strLine = "";
 		String csvSplitBy = ";";
-		InputStream in = DataLoader.class.getResourceAsStream("/producten.csv");
+		InputStream in = DataLoader.class.getResourceAsStream("/producten_utf8.csv");
 		
-		br = new BufferedReader(new InputStreamReader(in));
+		br = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
 		try {
 			try {
 				int i = 0;
@@ -507,9 +506,9 @@ public class DataLoader {
 	}
 	
 	private void loadPropertiesInDB(){
-		BufferedWriter writer;
-		try {
-			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path + "\\query.txt"), "utf-8"));
+		//BufferedWriter writer;
+		//try {
+			//writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path + "\\query.txt"), "utf-8"));
 			
 			for(int i = 0; i<Product.prodList.size();i++){
 				Product p = Product.prodList.get(i);			
@@ -670,24 +669,26 @@ public class DataLoader {
 				Session session = Config.driver.session();
 				session.run(query);
 				session.close();
+
+				System.out.println("wrote query for artikelnummer "+p.artikelNummer+": " + query);
 				
-				query+="\r\n";
-				writer.write(query);
-				writer.flush();
+				//query+="\r\n";
+				//writer.write(query);
+				//writer.flush();
 			}
 		
-			writer.flush();
-			writer.close();
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			//writer.flush();
+			//writer.close();
+//		} catch (UnsupportedEncodingException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 	
 	private String removeOddCharacters(String x){	
