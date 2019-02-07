@@ -1,9 +1,9 @@
-package be.pauwel.pi.product;
+package be.pauwel.pi.product.viewmodel;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-import org.neo4j.ogm.annotation.NodeEntity;
 
-@NodeEntity
 public class Company {
 
     public static ArrayList<Company> companyList = new ArrayList<Company>();

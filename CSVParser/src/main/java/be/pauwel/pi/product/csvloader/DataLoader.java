@@ -2,23 +2,18 @@ package be.pauwel.pi.product.csvloader;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.text.Normalizer;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.neo4j.driver.v1.Values.parameters;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.neo4j.driver.v1.Session;
 
-import be.pauwel.pi.product.csvloader.DataLoader;
 import be.pauwel.pi.product.viewmodel.Company;
 import be.pauwel.pi.product.viewmodel.Product;
 import be.pauwel.pi.product.viewmodel.Property;
-import org.neo4j.driver.v1.StatementResult;
 import org.neo4j.driver.v1.Transaction;
-import org.neo4j.driver.v1.TransactionWork;
 
 import static be.pauwel.pi.product.csvloader.Config.driver;
 
@@ -41,20 +36,41 @@ public class DataLoader {
 		}
 
 		System.out.println("Empty database...");
-		l.emptyDatabase();
+		//l.emptyDatabase();
 
 		System.out.println("Parse CSV Gyproc...");
 		l.parseGyprocProducten();
 		l.cleanGyprocProperties();
+		l.createJSON();
 		
 		//l.parseRensonProducten();
 
-		l.loadSVKProducten();
+		//l.loadSVKProducten();
 		//l.loadTIATAB();
 
 		System.out.println("Load into database...");
-		l.loadPropertiesInDB();
+		//l.loadPropertiesInDB();
 		System.out.println("Done!");
+	}
+
+	private void createJSON(){
+		ObjectMapper mapper = new ObjectMapper();
+
+
+		try {
+			for(int i = 0; i<2;i++) {
+				Product p = Product.prodList.get(i);
+				mapper.writeValue(new File(Config.path + "/product.json"), p);
+
+				String jsonInString = mapper.writeValueAsString(p);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		//Object to JSON in file
+
+		//Object to JSON in String
 	}
 
 	private void emptyDatabase(){
@@ -155,6 +171,8 @@ public class DataLoader {
 		String csvSplitBy = ";";
 		InputStream inattr = DataLoader.class.getResourceAsStream("/renson_export_attributes.csv");
 		InputStream inprod = DataLoader.class.getResourceAsStream("/renson_export_products.csv");
+		Map<String, String> propnamesNL = new HashMap<>();
+		Map<String, String> propnamesFR = new HashMap<>();
 		
 		br = new BufferedReader(new InputStreamReader(inattr));
 		try {
@@ -162,15 +180,23 @@ public class DataLoader {
 				int i = 0;
 				while ((strLine = br.readLine()) != null) {
 					if (strLine.length() > 0 && i>0) {
-						String[] elements = strLine.split(csvSplitBy, -1);	
+						//String[] elements = strLine.split(csvSplitBy, -1);
+						//propnamesNL.put(elements[0,3]);
+						//propnamesFR.put(elements[0,1]);
 						
-						//TODO:loadProperties
-						
+						//TODO:loadPropertyNames
+						//code;label-fr_BE;label-en_US;label-nl_BE;allowed_extensions;available_locales;
+						// date_max;date_min;decimals_allowed;default_metric_unit;group;localizable;
+						// max_characters;max_file_size;metric_family;minimum_input_length;negative_allowed;
+						// number_max;number_min;reference_data_name;scopable;sort_order;type;unique;
+						// useable_as_grid_filter;validation_regexp;validation_rule;wysiwyg_enabled
+
+						//vb: sku;Code unique;SKU;Unieke code;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_identifier;1;1;;;0
 					}
 					i++;
 				}		
 			} finally {
-					br.close();
+				br.close();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -185,7 +211,9 @@ public class DataLoader {
 						String[] elements = strLine.split(csvSplitBy, -1);	
 
 						Product p = new Product();
-						//TODO:loadProperties
+						//TODO:loadData
+
+						//sku;categories;enabled;family;groups;acoustic_insulation;acoustic_retrofit_module;airflow_class;airtight_class;alignment;app;bim;BIM_2015-fr_BE;BIM_2015-nl_BE;BIM_2016-fr_BE;BIM_2016-nl_BE;BIM_2017-fr_BE;BIM_2017-nl_BE;BIM_2018-fr_BE;BIM_2018-nl_BE;blind_angle;blind_height;blind_material;blind_max_strain;blind_shape;blind_step;blind_width;breeze_function;brochure-fr_BE;brochure-nl_BE;buildin_depth;builtin_height;burglar_repellent;cd_coefficient;certificate_warranty;ce_certified;ce_coefficient;cladding_options;clipping_material;clipping_type;clips_material;clips_type;color;compatibel_thickness_window;components_ventilation;connectable;console_type;control;controls_sunprotection;control_industrial_vents;cubic_flow;cubic_flow_max;cubic_flow_text-fr_BE;cubic_flow_text-nl_BE;demand_driven;depth;depth_beugel;depth_case;description-fr_BE;description-nl_BE;description_short-fr_BE;description_short-nl_BE;design;diameter;diameter_attachment_multi;diameter_flow;diameter_variant;diy_application;diy_control;diy_material;diy_shape;domotics;dop_declaration;download_software-fr_BE;download_software-nl_BE;drainage_dry_rooms;dwg_files-fr_BE;dwg_files-nl_BE;ean_code;ecolabel-fr_BE;ecolabel-nl_BE;education_mandatory;electricity_consumption;epb;external_sensors;facet_rank;filling_material;finish-fr_BE;finish-nl_BE;finishing_profile;flow_2pa;flow_limiter;flow_regulation;frame_assessment;frame_height;frame_material;frame_type;frame_width;freestanding;glass_deduction;glass_thickness;glass_thickness_multi;glazing_rubber;heat_recuperation;height;height_case;height_mounting_brackets;height_variant;image_1;image_2;image_3;insect_repellent;install;install_options;install_ss;integrated_ventilator;i_flux_technology;joinable;joinable_ss;Kit-groups;Kit-products;k_factor_exhaust;k_factor_exhaust_without_netting;k_factor_exhaust_with_netting;k_factor_suction;k_factor_suction_without_netting;k_factor_suction_with_netting;leaflet-fr_BE;leaflet-nl_BE;length;length_semidec;manual-fr_BE;manual-nl_BE;max_area;max_area_joined;max_decrease_epeil;max_height;max_height_joined;max_height_screen;max_length;max_length_motorised;max_length_rope;max_length_traverse_installatie;max_protrusion;max_width;max_width_joined;max_width_left;max_width_right;max_width_screen;mechvent_combine;mechvent_control;mechvent_feed;mechvent_installguide-fr_BE;mechvent_installguide-nl_BE;mechvent_measurement_airquality;mechvent_reduction_factor;mechvent_usp_1;mechvent_usp_1_variant;mechvent_usp_2;mechvent_usp_2_variant;mechvent_usp_3;mechvent_usp_3_variant;mechvent_usp_4;mechvent_usp_4_variant;mechvent_usp_else;min_angle;min_height;min_height_screen;min_protrusion;min_width;min_width_engine_excl;min_width_engine_inc;min_width_screen;name-fr_BE;name-nl_BE;net_type;ordercode;outside_cover;packaging-fr_BE;packaging-nl_BE;passage_physical;passage_visual;pollux_filter;preheater;pressure_drop;roof_opening;rooms_to_vent;rooster_kleur_variant;sandwich_panel;screen_acryl;screen_b92;screen_cristal;screen_fiberglass;screen_insect_netting_tuff;screen_isr;screen_polyester;screen_polyester_soltis;screen_polyester_soltis_dark;screen_rensonscreen_dark;screen_satine21154_dark;screen_type;screen_waterproof;self_regulation_class;slide_system;slotheight;smarthome;sound_insulating;sound_insulation_closed;sound_insulation_open;sound_level;specification_text-fr_BE;specification_text-nl_BE;step_control;struc_install;struc_options;struc_position_blinds;sunprotection_application;sunprotection_design;sunp_technology;support_depth;support_material;support_max_strain;support_type;support_width;surface_treatment;systeem_slidefix;system;system_control;tech_drawing-fr_BE;tech_drawing-nl_BE;test_report_2-fr_BE;test_report_2-nl_BE;thermal_interruption;thickness_roof;total_measurement;type_aansluiting;type_blind;type_building;type_concept;type_endura_delta;type_lamel_SS-fr_BE;type_lamel_SS-nl_BE;type_lamel_variant;type_support;type_uitvoering;type_ventilation;type_window_ventilation;usp_1;usp_1_variant;usp_2;usp_2_variant;usp_3;usp_3_variant;usp_4;usp_4_variant;usp_alu_1;usp_alu_1_variant;usp_alu_2;usp_alu_2_variant;usp_alu_3;usp_alu_3_variant;usp_alu_4;usp_alu_4_variant;usp_alu_else;usp_alu_else_variant;usp_diy_1;usp_diy_1_variant;usp_diy_2;usp_diy_2_variant;usp_diy_3;usp_diy_3_variant;usp_diy_4;usp_diy_4_variant;usp_diy_else;usp_diy_else_variant;usp_else;usp_else_variant;usp_gevelbekleding_1;usp_gevelbekleding_2;usp_gevelbekleding_3;usp_gevelbekleding_4;usp_gevelbekleding_else;usp_outdoor_1;usp_outdoor_2;usp_outdoor_3;usp_outdoor_4;usp_outdoor_else;usp_roosters_1;usp_roosters_1_variant;usp_roosters_2;usp_roosters_2_variant;usp_roosters_3;usp_roosters_3_variant;usp_roosters_4;usp_roosters_4_variant;usp_roosters_else;usp_roosters_else_variant;u_value;variant_description-fr_BE;variant_description-nl_BE;variant_description_short-fr_BE;variant_description_short-nl_BE;variant_image_1;variant_image_2;variant_image_3;variant_type_acoustic;variant_type_placement;vent_acoustic_roof;vent_acoustic_window;vent_dimensioning;vent_extra_features;vent_installation;vent_material;vent_roller_shutter;vent_size_type;vent_slotvent;vent_type_variant;vent_usp_1;vent_usp_1_variant;vent_usp_2;vent_usp_2_variant;vent_usp_3;vent_usp_3_variant;vent_usp_4;vent_usp_4_variant;vent_usp_else;vent_usp_else_variant;vent_waterproof_closed;vent_waterproof_open;video-fr_BE;video-nl_BE;warranty;warranty_engines_automation-fr_BE;warranty_engines_automation-nl_BE;warranty_fixscreen_technology;warranty_lacquer-fr_BE;warranty_lacquer-nl_BE;water_resistance_class;width;width_case;width_variant;window_type;wind_resistance;wind_resistance_blackout;wind_resistance_class_EN13561;wind_resistance_freestanding
 					}
 					i++;
 				}		
