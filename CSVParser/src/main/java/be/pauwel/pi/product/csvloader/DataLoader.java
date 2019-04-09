@@ -36,20 +36,20 @@ public class DataLoader {
 		}
 
 		System.out.println("Empty database...");
-		//l.emptyDatabase();
+		l.emptyDatabase();
 
 		System.out.println("Parse CSV Gyproc...");
 		l.parseGyprocProducten();
 		l.cleanGyprocProperties();
-		l.createJSON();
+		//l.createJSON();
 		
 		//l.parseRensonProducten();
 
-		//l.loadSVKProducten();
+		l.loadSVKProducten();
 		//l.loadTIATAB();
 
 		System.out.println("Load into database...");
-		//l.loadPropertiesInDB();
+		l.loadPropertiesInDB();
 		System.out.println("Done!");
 	}
 

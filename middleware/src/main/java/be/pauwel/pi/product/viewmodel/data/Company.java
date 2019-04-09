@@ -1,6 +1,4 @@
-package be.pauwel.pi.product.viewmodel;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
+package be.pauwel.pi.product.viewmodel.data;
 
 import java.util.ArrayList;
 

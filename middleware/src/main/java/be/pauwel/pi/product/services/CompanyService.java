@@ -1,6 +1,6 @@
 package be.pauwel.pi.product.services;
 
-import be.pauwel.pi.product.viewmodel.Company;
+import be.pauwel.pi.product.viewmodel.data.Company;
 
 import java.util.List;
 

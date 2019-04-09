@@ -1,7 +1,7 @@
 package be.pauwel.pi.product.rest;
 
 import be.pauwel.pi.product.services.CompanyService;
-import be.pauwel.pi.product.viewmodel.Company;
+import be.pauwel.pi.product.viewmodel.data.Company;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

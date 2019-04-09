@@ -1,4 +1,4 @@
-package be.pauwel.pi.product.viewmodel;
+package be.pauwel.pi.product.viewmodel.data;
 
 import java.util.ArrayList;
 import java.util.List;
