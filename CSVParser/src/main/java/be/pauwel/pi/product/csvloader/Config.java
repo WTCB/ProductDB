@@ -19,13 +19,13 @@ public class Config {
 	
 	public Config() {
 		String basePath = new File("").getAbsolutePath();
-		path = basePath + "\\src\\main\\resources";
+		path = basePath + "/src/main/resources";
 	}	
 	
 	public static void getData() throws IOException{
 	    Properties mainProperties = new Properties();
 	    FileInputStream file;
-	    String s = Config.path + "\\config.properties";
+	    String s = Config.path + "/config.properties";
 	    file = new FileInputStream(s);
 	    mainProperties.load(file);
 	    file.close();

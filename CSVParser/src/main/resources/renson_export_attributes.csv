@@ -6,7 +6,7 @@ image_3;Image 3;;Afbeelding 3;;;;;0;;assets;0;;;;0;0;;;;0;0;pim_catalog_text;0;0
 bim;BIM;;BIM;;;;;0;;assets;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 max_width;Largeur maximale(mm);;Maximale breedte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;40;pim_catalog_number;0;0;;;0
 max_height;Hauteur maximale (mm);;Maximale hoogte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;42;pim_catalog_number;0;0;;;0
-max_area;Surface maximale (m2);;Maximale oppervlakte (m²);;;;;1;;measurements;0;;;;0;0;;;;0;43;pim_catalog_number;0;0;;;0
+max_area;Surface maximale (m2);;Maximale oppervlakte (mÂ²);;;;;1;;measurements;0;;;;0;0;;;;0;43;pim_catalog_number;0;0;;;0
 description;Description;;Omschrijving;;;;;0;;marketing;1;;;;0;0;;;;0;15;pim_catalog_textarea;0;0;;;0
 fixed;Fixe;;Vast;;;;;0;;general;0;;;;0;0;;;;0;92;pim_catalog_boolean;0;0;;;0
 dynamic;Dynamique;;Dynamisch;;;;;0;;general;0;;;;0;0;;;;0;93;pim_catalog_boolean;0;0;;;0
@@ -14,72 +14,72 @@ height_case;Hauteur du caisson(mm);;Hoogte kast (mm);;;;;0;;measurements;0;;;;0;
 depth_case;Profondeur du caisson(mm);;Diepte kast (mm);;;;;0;;measurements;0;;;;0;0;;;;0;21;pim_catalog_number;0;0;;;0
 min_width;Largeur minimale (mm);;Minimum breedte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;39;pim_catalog_number;0;0;;;0
 min_height;Hauteur minimale (mm);;Minimum hoogte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;41;pim_catalog_number;0;0;;;0
-wind_resistance;Résistance au vent garantie en position fermée (km/h);;Gegarandeerde windweerstand in gesloten stand (Km/h);;;;;0;;technical_properties;0;;;;0;0;;;;0;56;pim_catalog_number;0;0;;;0
-ce_certified;Certifié CE;;CE-gekeurd;;;;;0;;technical_properties;0;;;;0;0;;;;0;54;pim_catalog_boolean;0;0;;;0
+wind_resistance;RÃ©sistance au vent garantie en position fermÃ©e (km/h);;Gegarandeerde windweerstand in gesloten stand (Km/h);;;;;0;;technical_properties;0;;;;0;0;;;;0;56;pim_catalog_number;0;0;;;0
+ce_certified;CertifiÃ© CE;;CE-gekeurd;;;;;0;;technical_properties;0;;;;0;0;;;;0;54;pim_catalog_boolean;0;0;;;0
 screen_b92;Toile occultante en polyester B92;;Doek blackout polyester B92;;;;;0;;screen;0;;;;0;0;;;;0;10;pim_catalog_boolean;0;0;;;0
 screen_fiberglass;Toile en fibre de verre;;Glasvezeldoek;;;;;0;;screen;0;;;;0;0;;;;0;0;pim_catalog_boolean;0;0;;;0
 screen_isr;Toile moustiquaire ISR;;Insectenscreen ISR;;;;;0;;screen;0;;;;0;0;;;;0;8;pim_catalog_boolean;0;0;;;0
-screen_cristal;Toile avec fenêtre Crystal;;Glasvezeldoek met crystalvenster;;;;;0;;screen;0;;;;0;0;;;;0;1;pim_catalog_boolean;0;0;;;0
+screen_cristal;Toile avec fenÃªtre Crystal;;Glasvezeldoek met crystalvenster;;;;;0;;screen;0;;;;0;0;;;;0;1;pim_catalog_boolean;0;0;;;0
 screen_polyester;Toile polyester Rensonscreen;;Polyesterdoek Rensonscreen;;;;;0;;screen;0;;;;0;0;;;;0;3;pim_catalog_boolean;0;0;;;0
 screen_waterproof;Toile polyester Rensonscreen Waterproof;;Polyesterdoek Rensonscreen Waterproof;;;;;0;;screen;0;;;;0;0;;;;0;4;pim_catalog_boolean;0;0;;;0
 installation;Installation;;Installatie;;;;;0;;marketing;1;;;;0;0;;;;0;44;pim_catalog_textarea;0;0;;;0
-window_type;Type de fenêtre;;Type raam;;;;;0;;general;0;;;;0;0;;;;0;81;pim_catalog_multiselect;0;0;;;0
-type_building;Type de bâtiment;;Type gebouw;;;;;0;;general;0;;;;0;0;;;;0;19;pim_catalog_multiselect;0;0;;;0
+window_type;Type de fenÃªtre;;Type raam;;;;;0;;general;0;;;;0;0;;;;0;81;pim_catalog_multiselect;0;0;;;0
+type_building;Type de bÃ¢timent;;Type gebouw;;;;;0;;general;0;;;;0;0;;;;0;19;pim_catalog_multiselect;0;0;;;0
 screen_type;Type de protection solaire;;Type zonwering;;;;;0;;general;0;;;;0;0;;;;0;21;pim_catalog_simpleselect;0;0;;;0
-extra_features;Caractéristiques complémentaires;;Extra kenmerken;;;;;0;;general;0;;;;0;0;;;;0;84;pim_catalog_multiselect;0;0;;;0
+extra_features;CaractÃ©ristiques complÃ©mentaires;;Extra kenmerken;;;;;0;;general;0;;;;0;0;;;;0;84;pim_catalog_multiselect;0;0;;;0
 install;Situation de montage;;Montagesituatie;;;;;0;;general;0;;;;0;0;;;;0;85;pim_catalog_multiselect;0;0;;;0
 control;Commande;;Bediening;;;;;0;;control;0;;;;0;0;;;;0;1;pim_catalog_multiselect;0;0;;;0
 joinable;Couplable;;Koppelbaar;;;;;0;;measurements;0;;;;0;0;;;;0;53;pim_catalog_boolean;0;0;;;0
-wind_resistance_class_EN13561;Classe de résistance au vent EN13561;;Windklasse EN13561;;;;;0;;technical_properties;0;;;;0;0;;;;0;55;pim_catalog_simpleselect;0;0;;;0
-max_width_joined;Largeur maximale - couplé (mm);;Maximale breedte gekoppeld (mm);;;;;0;;measurements;0;;;;0;0;;;;0;44;pim_catalog_number;0;0;;;0
-max_height_joined;Hauteur maximale - couplé (mm);;Maximale hoogte gekoppeld (mm);;;;;0;;measurements;0;;;;0;0;;;;0;48;pim_catalog_number;0;0;;;0
-max_area_joined;Surface maximale - couplé (m2);;Maximale oppervlakte gekoppeld (m²);;;;;1;;measurements;0;;;;0;0;;;;0;47;pim_catalog_number;0;0;;;0
-height_mounting_brackets;hauteur des équerres (mm);;Hoogte beugels (mm);;;;;0;;measurements;0;;;;0;0;;;;0;31;pim_catalog_number;0;0;;;0
+wind_resistance_class_EN13561;Classe de rÃ©sistance au vent EN13561;;Windklasse EN13561;;;;;0;;technical_properties;0;;;;0;0;;;;0;55;pim_catalog_simpleselect;0;0;;;0
+max_width_joined;Largeur maximale - couplÃ© (mm);;Maximale breedte gekoppeld (mm);;;;;0;;measurements;0;;;;0;0;;;;0;44;pim_catalog_number;0;0;;;0
+max_height_joined;Hauteur maximale - couplÃ© (mm);;Maximale hoogte gekoppeld (mm);;;;;0;;measurements;0;;;;0;0;;;;0;48;pim_catalog_number;0;0;;;0
+max_area_joined;Surface maximale - couplÃ© (m2);;Maximale oppervlakte gekoppeld (mÂ²);;;;;1;;measurements;0;;;;0;0;;;;0;47;pim_catalog_number;0;0;;;0
+height_mounting_brackets;hauteur des Ã©querres (mm);;Hoogte beugels (mm);;;;;0;;measurements;0;;;;0;0;;;;0;31;pim_catalog_number;0;0;;;0
 height;Hauteur (mm);;Hoogte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;32;pim_catalog_number;0;0;;;0
 width;Largeur (mm);;Breedte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;33;pim_catalog_number;0;0;;;0
 depth;Profondeur (mm);;Diepte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;34;pim_catalog_number;0;0;;;0
 total_measurement;Dimension totale (mm);;Totaalmaat (mm);;;;;0;;measurements;0;;;;0;0;;;;0;35;pim_catalog_number;0;0;;;0
 overall_size;Dimension hors tout (mm);;Overmeten maat (mm);;;;;0;;measurements;0;;;;0;0;;;;0;36;pim_catalog_number;0;0;;;0
 pollux_filter;Filtre Pollux;;Pollux filter;;;;;0;;technical_properties;0;;;;0;0;;;;0;1;pim_catalog_boolean;0;0;;;0
-cubic_flow;Débit (m3/h);;Debiet (m³/h);;;;;0;;technical_properties;0;;;;0;0;;;;0;2;pim_catalog_number;0;0;;;0
+cubic_flow;DÃ©bit (m3/h);;Debiet (mÂ³/h);;;;;0;;technical_properties;0;;;;0;0;;;;0;2;pim_catalog_number;0;0;;;0
 vent_installation;Installation de la ventilation;;Installatie ventilatie;;;;;0;;technical_properties;0;;;;0;0;;;;0;3;pim_catalog_multiselect;0;0;;;0
-type_window_ventilation;Type d'aérateur;;Type raamverluchting;;;;;0;;technical_properties;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;1;;;0
-vent_acoustic_roof;Aérateur acoustique en toiture;;Akoustische verluchtingen voor het dak;;;;;0;;technical_properties;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;0;;;0
-vent_acoustic_window;Aérateur acoustique pour châssis;;Akoestische raamverluchtingen;;;;;0;;technical_properties;0;;;;0;0;;;;0;6;pim_catalog_boolean;0;0;;;0
-vent_slotvent;Aérateur à  coulisse;;Schuifverluchting;;;;;0;;technical_properties;0;;;;0;0;;;;0;7;pim_catalog_boolean;0;0;;;0
-vent_roller_shutter;Aérateur pour caisson de volet roulant;;Ventilatierooster voor rolluikkast;;;;;0;;technical_properties;0;;;;0;0;;;;0;8;pim_catalog_boolean;0;0;;;0
+type_window_ventilation;Type d'aÃ©rateur;;Type raamverluchting;;;;;0;;technical_properties;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;1;;;0
+vent_acoustic_roof;AÃ©rateur acoustique en toiture;;Akoustische verluchtingen voor het dak;;;;;0;;technical_properties;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;0;;;0
+vent_acoustic_window;AÃ©rateur acoustique pour chÃ¢ssis;;Akoestische raamverluchtingen;;;;;0;;technical_properties;0;;;;0;0;;;;0;6;pim_catalog_boolean;0;0;;;0
+vent_slotvent;AÃ©rateur Ã Â  coulisse;;Schuifverluchting;;;;;0;;technical_properties;0;;;;0;0;;;;0;7;pim_catalog_boolean;0;0;;;0
+vent_roller_shutter;AÃ©rateur pour caisson de volet roulant;;Ventilatierooster voor rolluikkast;;;;;0;;technical_properties;0;;;;0;0;;;;0;8;pim_catalog_boolean;0;0;;;0
 vent_dimensioning;Dimensionnement;;Dimensionering;;;;;0;;technical_properties;0;;;;0;0;;;;0;9;pim_catalog_multiselect;0;0;;;0
-self_regulating;autoréglable;;Zelfregelend;;;;;0;;control;0;;;;0;0;;;;0;0;pim_catalog_boolean;0;0;;;0
+self_regulating;autorÃ©glable;;Zelfregelend;;;;;0;;control;0;;;;0;0;;;;0;0;pim_catalog_boolean;0;0;;;0
 color;Couleurs;;Kleuren;;;;;0;;general;0;;;;0;0;;;;0;86;pim_catalog_multiselect;0;0;;;0
 thermal_interruption;Rupture de pont thermique;;Thermische onderbreking;;;;;0;;technical_properties;0;;;;0;0;;;;0;10;pim_catalog_boolean;0;0;;;0
 insect_repellent;pare-insectes;;Insectenwerend;;;;;0;;general;0;;;;0;0;;;;0;87;pim_catalog_boolean;0;0;;;0
 burglar_repellent;Anti-effraction;;Inbraakwerend;;;;;0;;general;0;;;;0;0;;;;0;88;pim_catalog_boolean;0;0;;;0
 epb;PEB;;EPB;;;;;0;;general;0;;;;0;0;;;;0;89;pim_catalog_boolean;0;0;;;0
-vent_waterproof_open;Etanchéité à  l'eau en position ouverte;;Waterdichtheid in open stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;11;pim_catalog_number;0;0;;;0
-system;Système;;Systeem;;;;;0;;general;0;;;;0;0;;;;0;82;pim_catalog_multiselect;0;1;;;0
+vent_waterproof_open;EtanchÃ©itÃ© Ã Â  l'eau en position ouverte;;Waterdichtheid in open stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;11;pim_catalog_number;0;0;;;0
+system;SystÃ¨me;;Systeem;;;;;0;;general;0;;;;0;0;;;;0;82;pim_catalog_multiselect;0;1;;;0
 u_value;Valeur U;;U-waarde;;;;;1;;technical_properties;0;;;;0;0;;;;0;12;pim_catalog_number;0;0;;;0
-step_control;Réglage des positions;;Standenregeling;;;;;0;;general;0;;;;0;0;;;;0;90;pim_catalog_multiselect;0;0;;;0
+step_control;RÃ©glage des positions;;Standenregeling;;;;;0;;general;0;;;;0;0;;;;0;90;pim_catalog_multiselect;0;0;;;0
 components_ventilation;Composants de la ventilation;;Ventilatiecomponenten;;;;;0;;general;0;;;;0;0;;;;0;91;pim_catalog_multiselect;0;0;;;0
 type_concept;Type de concept;;Type concept;;;;;0;;general;0;;;;0;0;;;;0;20;pim_catalog_multiselect;0;0;;;0
 finishing_profile;Profil de finition;;Afwerkingsprofiel;;;;;0;;technical_properties;0;;;;0;0;;;;0;13;pim_catalog_boolean;0;0;;;0
-outside_cover;Capot extérieur;;Buitenkap;;;;;0;;technical_properties;0;;;;0;0;;;;0;14;pim_catalog_boolean;0;0;;;0
-flow_limiter;Limitateur de débit;;Debietbeperker;;;;;0;;technical_properties;0;;;;0;0;;;;0;15;pim_catalog_boolean;0;0;;;0
-vent_material;Matériau de la ventilation;;Materiaal ventilatie;;;;;0;;general;0;;;;0;0;;;;0;83;pim_catalog_multiselect;0;0;;;0
+outside_cover;Capot extÃ©rieur;;Buitenkap;;;;;0;;technical_properties;0;;;;0;0;;;;0;14;pim_catalog_boolean;0;0;;;0
+flow_limiter;Limitateur de dÃ©bit;;Debietbeperker;;;;;0;;technical_properties;0;;;;0;0;;;;0;15;pim_catalog_boolean;0;0;;;0
+vent_material;MatÃ©riau de la ventilation;;Materiaal ventilatie;;;;;0;;general;0;;;;0;0;;;;0;83;pim_catalog_multiselect;0;0;;;0
 i_flux_technology;Technologie i-Flux;;i-Flux technologie;;;;;0;;general;0;;;;0;0;;;;0;74;pim_catalog_boolean;0;0;;;0
 type_ventilation;Type de ventilation;;Soort ventilatie;;;;;0;;general;0;;;;0;0;;;;0;75;pim_catalog_simpleselect;0;1;;;0
-system_control;Système centralisé ou décentralisé;;Centraal of decentraal systeem;;;;;0;;general;0;;;;0;0;;;;0;76;pim_catalog_simpleselect;0;0;;;0
-vent_extra_features;Caractéristiques complémentaires de la ventilation;;Extra eigenschappen ventilatie;;;;;0;;general;0;;;;0;0;;;;0;77;pim_catalog_multiselect;0;0;;;0
-self_regulation_class;Classe d'autorégulation;;Zelfregelendheidsklasse;;;;;0;;general;0;;;;0;0;;;;0;78;pim_catalog_multiselect;0;0;;;0
+system_control;SystÃ¨me centralisÃ© ou dÃ©centralisÃ©;;Centraal of decentraal systeem;;;;;0;;general;0;;;;0;0;;;;0;76;pim_catalog_simpleselect;0;0;;;0
+vent_extra_features;CaractÃ©ristiques complÃ©mentaires de la ventilation;;Extra eigenschappen ventilatie;;;;;0;;general;0;;;;0;0;;;;0;77;pim_catalog_multiselect;0;0;;;0
+self_regulation_class;Classe d'autorÃ©gulation;;Zelfregelendheidsklasse;;;;;0;;general;0;;;;0;0;;;;0;78;pim_catalog_multiselect;0;0;;;0
 sound_insulation_open;Affaiblissement acoustique en position ouverte;;Geluidsdemping in open stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;16;pim_catalog_number;0;0;;;0
-sound_insulation_closed;Affaiblissement acoustique en position fermée;;Geluidsdemping in gesloten stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;17;pim_catalog_number;0;0;;;0
+sound_insulation_closed;Affaiblissement acoustique en position fermÃ©e;;Geluidsdemping in gesloten stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;17;pim_catalog_number;0;0;;;0
 sound_insulating;Affaiblissement acoustique;;Geluidsdempend;;;;;0;;technical_properties;0;;;;0;0;;;;0;18;pim_catalog_boolean;0;0;;;0
 acoustic_retrofit_module;Module acoustique retrofit;;Akoestische retrofit module;;;;;0;;general;0;;;;0;0;;;;0;79;pim_catalog_boolean;0;0;;;0
-glass_deduction;Déduction de vitrage (mm);;Glasaftrek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;37;pim_catalog_number;0;0;;;0
+glass_deduction;DÃ©duction de vitrage (mm);;Glasaftrek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;37;pim_catalog_number;0;0;;;0
 glass_thickness;Epaisseur du vitrage (mm);;Glasdikte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;38;pim_catalog_number;0;0;;;0
 sandwich_panel;Panneau sandwich;;Sandwichpaneel;;;;;0;;general;0;;;;0;0;;;;0;80;pim_catalog_boolean;0;0;;;0
 glazing_rubber;Joint pour vitrage en caoutchouc;;Beglazingsrubber;;;;;0;;technical_properties;0;;;;0;0;;;;0;19;pim_catalog_multiselect;0;0;;;0
-vent_waterproof_closed;Etanchéité à  l'eau en position fermée;;Waterdichtheid in gesloten stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;20;pim_catalog_number;0;0;;;0
-cladding_options;Options complémentaires pour revêtement de faà§ade;;Extra opties gevelbekleding;;;;;0;;general;0;;;;0;0;;;;0;22;pim_catalog_multiselect;0;0;;;0
+vent_waterproof_closed;EtanchÃ©itÃ© Ã Â  l'eau en position fermÃ©e;;Waterdichtheid in gesloten stand;;;;;1;;technical_properties;0;;;;0;0;;;;0;20;pim_catalog_number;0;0;;;0
+cladding_options;Options complÃ©mentaires pour revÃªtement de faÃ Â§ade;;Extra opties gevelbekleding;;;;;0;;general;0;;;;0;0;;;;0;22;pim_catalog_multiselect;0;0;;;0
 alignment;Alignement;;Uitlijning;;;;;0;;general;0;;;;0;0;;;;0;15;pim_catalog_multiselect;0;1;;;0
 type_blind;Type de lame;;Type Lamel;;;;;0;;general;0;;;;0;0;;;;0;16;pim_catalog_multiselect;0;0;;;0
 blind_shape;Forme de la lame;;Vorm lamel;;;;;0;;general;0;;;;0;0;;;;0;17;pim_catalog_multiselect;0;0;;;0
@@ -87,11 +87,11 @@ blind_width;Largeur de la lame;;Lamelbreedte;;;;;1;;measurements;0;;;;0;0;;;;0;5
 blind_height;Hauteur de la lame;;Lamelhoogte;;;;;0;;measurements;0;;;;0;0;;;;0;51;pim_catalog_text;0;0;;;0
 blind_step;Pas de lame;;Lamelstap;;;;;0;;measurements;0;;;;0;0;;;;0;52;pim_catalog_text;0;0;;;0
 blind_max_strain;entraxe maximal de la lame sous une charge de vent de 800 Pa;;Maximale overspanning van de lamel bij 800 Pa windlast;;;;;0;;technical_properties;0;;;;0;0;;;;0;24;pim_catalog_text;0;0;;;0
-blind_material;Matériau de la lame;;Materiaal Lamel;;;;;0;;general;0;;;;0;0;;;;0;18;pim_catalog_multiselect;0;0;;;0
+blind_material;MatÃ©riau de la lame;;Materiaal Lamel;;;;;0;;general;0;;;;0;0;;;;0;18;pim_catalog_multiselect;0;0;;;0
 surface_treatment;Traitement de surface;;Oppervlaktebehandeling;;;;;0;;technical_properties;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
 type_support;Type de porteur;;Type drager;;;;;0;;general;0;;;;0;0;;;;0;23;pim_catalog_multiselect;0;0;;;0
 support_type;Type de porteur;;Type drager;;;;;0;;technical_properties;0;;;;0;0;;;;0;26;pim_catalog_multiselect;0;0;;;0
-support_material;Matériau du porteur;;Materiaal drager;;;;;0;;technical_properties;0;;;;0;0;;;;0;27;pim_catalog_multiselect;0;0;;;0
+support_material;MatÃ©riau du porteur;;Materiaal drager;;;;;0;;technical_properties;0;;;;0;0;;;;0;27;pim_catalog_multiselect;0;0;;;0
 support_width;Largeur du porteur;;Breedte drager;;;;;0;;technical_properties;0;;;;0;0;;;;0;28;pim_catalog_text;0;0;;;0
 support_depth;Profondeur du porteur;;Diepte drager;;;;;0;;technical_properties;0;;;;0;0;;;;0;29;pim_catalog_number;0;0;;;0
 support_max_strain;entraxe maximal du porteur sous une charge de vent de 800 Pa;;Maximale overspanning van de drager bij 800 Pa windlast;;;;;0;;technical_properties;0;;;;0;0;;;;0;30;pim_catalog_number;0;0;;;0
@@ -102,36 +102,36 @@ ce_coefficient;Coefficient Ce;;Ce coefficient;;;;;1;;technical_properties;0;;;;0
 passage_visual;surface visuelle libre en %;;Visueel vrije doorlaat in %;;;;;0;;technical_properties;0;;;;0;0;;;;0;36;pim_catalog_number;0;0;;;0
 passage_physical;Surface physique libre en %;;Fysische vrije doorlaat in %;;;;;1;;technical_properties;0;;;;0;0;;;;0;37;pim_catalog_number;0;0;;;0
 airflow_class;Classe de passage d'air;;Luchtdoorlaat klasse;;;;;0;;technical_properties;0;;;;0;0;;;;0;38;pim_catalog_multiselect;0;0;;;0
-water_resistance_class;Classe de résistance à  l'eau;;Waterwerendheidsklasse;;;;;0;;technical_properties;0;;;;0;0;;;;0;39;pim_catalog_multiselect;0;0;;;0
-clips_material;Matériau du clips;;Materiaal klips;;;;;0;;technical_properties;0;;;;0;0;;;;0;40;pim_catalog_multiselect;0;0;;;0
+water_resistance_class;Classe de rÃ©sistance Ã Â  l'eau;;Waterwerendheidsklasse;;;;;0;;technical_properties;0;;;;0;0;;;;0;39;pim_catalog_multiselect;0;0;;;0
+clips_material;MatÃ©riau du clips;;Materiaal klips;;;;;0;;technical_properties;0;;;;0;0;;;;0;40;pim_catalog_multiselect;0;0;;;0
 cd_coefficient;Coefficient Cd;;Cd-coefficient;;;;;1;;technical_properties;0;;;;0;0;;;;0;35;pim_catalog_number;0;0;;;0
-mechvent_control;Commande de la ventilation mécanique;;Bediening mechanische ventilatie;;;;;0;;general;0;;;;0;0;;;;0;24;pim_catalog_multiselect;0;0;;;0
+mechvent_control;Commande de la ventilation mÃ©canique;;Bediening mechanische ventilatie;;;;;0;;general;0;;;;0;0;;;;0;24;pim_catalog_multiselect;0;0;;;0
 mechvent_combine;Combinable avec;;Combineerbaar met;;;;;0;;general;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
 leaflet;Feuillet;;Leaflet;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 length;Longueur (mm);;Lengte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;22;pim_catalog_number;0;0;;;0
-diameter_flow;Diamètre du passage;;Diameter doorvoer;;;;;0;;technical_properties;0;;;;0;0;;;;0;41;pim_catalog_number;0;0;;;0
+diameter_flow;DiamÃ¨tre du passage;;Diameter doorvoer;;;;;0;;technical_properties;0;;;;0;0;;;;0;41;pim_catalog_number;0;0;;;0
 max_decrease_epeil;Diminution maximale de points E;;Maximale daling E-peil punten;;;;;0;;general;0;;;;0;0;;;;0;26;pim_catalog_number;0;0;;;0
-mechvent_reduction_factor;Facteur de réduction;;Reductiefactor;;;;;0;;technical_properties;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
-mechvent_measurement_airquality;Mesure de la qualité de l'air;;Meting luchtkwaliteit;;;;;0;;general;0;;;;0;0;;;;0;27;pim_catalog_multiselect;0;0;;;0
+mechvent_reduction_factor;Facteur de rÃ©duction;;Reductiefactor;;;;;0;;technical_properties;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
+mechvent_measurement_airquality;Mesure de la qualitÃ© de l'air;;Meting luchtkwaliteit;;;;;0;;general;0;;;;0;0;;;;0;27;pim_catalog_multiselect;0;0;;;0
 flow_regulation;Economie de chaleur;;Warmtebesparing;;;;;0;;technical_properties;0;;;;0;0;;;;0;43;pim_catalog_boolean;0;0;;;0
 app;App;;App;;;;;0;;general;0;;;;0;0;;;;0;28;pim_catalog_boolean;0;0;;;0
-external_sensors;Détecteurs externes de la qualité de l'air;;Sensoren detectie luchtkwaliteit;;;;;0;;general;0;;;;0;0;;;;0;29;pim_catalog_multiselect;0;0;;;0
-heat_recuperation;Récupération de chaleur;;Warmterecuperatie;;;;;0;;general;0;;;;0;0;;;;0;30;pim_catalog_boolean;0;0;;;0
-demand_driven;Commande à  la demande (modulée);;Vraagsturing;;;;;0;;general;0;;;;0;0;;;;0;31;pim_catalog_boolean;0;0;;;0
+external_sensors;DÃ©tecteurs externes de la qualitÃ© de l'air;;Sensoren detectie luchtkwaliteit;;;;;0;;general;0;;;;0;0;;;;0;29;pim_catalog_multiselect;0;0;;;0
+heat_recuperation;RÃ©cupÃ©ration de chaleur;;Warmterecuperatie;;;;;0;;general;0;;;;0;0;;;;0;30;pim_catalog_boolean;0;0;;;0
+demand_driven;Commande Ã Â  la demande (modulÃ©e);;Vraagsturing;;;;;0;;general;0;;;;0;0;;;;0;31;pim_catalog_boolean;0;0;;;0
 test_report_2;Rapport de test 2;;Test rapport 2;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 packaging;Emballage;;Verpakking;;;;;0;;general;1;;;;0;0;;;;0;32;pim_catalog_text;0;0;;;0
-drainage_dry_rooms;Evacuation des pièces sèches avec SmartZone;;Afvoer droge ruimtes a.d.h.v. Smartzone;;;;;0;;general;0;;;;0;0;;;;0;33;pim_catalog_boolean;0;0;;;0
-rooms_to_vent;Nombre maximal de pièces à  ventiler;;Maximum aantal ventileerbare ruimtes;;;;;0;;general;0;;;;0;0;;;;0;34;pim_catalog_number;0;0;;;0
-integrated_ventilator;Ventilateur intégré;;Aantal geïntegreerde ventilatoren;;;;;0;;technical_properties;0;;;;0;0;;;;0;44;pim_catalog_multiselect;0;0;;;0
-spare_parts;pièces détachées;;2 geïntegreerde ventilatoren;;;;;0;;technical_properties;0;;;;0;0;;;;0;45;pim_catalog_boolean;0;0;;;0
+drainage_dry_rooms;Evacuation des piÃ¨ces sÃ¨ches avec SmartZone;;Afvoer droge ruimtes a.d.h.v. Smartzone;;;;;0;;general;0;;;;0;0;;;;0;33;pim_catalog_boolean;0;0;;;0
+rooms_to_vent;Nombre maximal de piÃ¨ces Ã Â  ventiler;;Maximum aantal ventileerbare ruimtes;;;;;0;;general;0;;;;0;0;;;;0;34;pim_catalog_number;0;0;;;0
+integrated_ventilator;Ventilateur intÃ©grÃ©;;Aantal geÃ¯ntegreerde ventilatoren;;;;;0;;technical_properties;0;;;;0;0;;;;0;44;pim_catalog_multiselect;0;0;;;0
+spare_parts;piÃ¨ces dÃ©tachÃ©es;;2 geÃ¯ntegreerde ventilatoren;;;;;0;;technical_properties;0;;;;0;0;;;;0;45;pim_catalog_boolean;0;0;;;0
 breeze_function;Fonction Breeze;;Breeze functie;;;;;0;;general;0;;;;0;0;;;;0;35;pim_catalog_boolean;0;0;;;0
 domotics;Domotique;;Domotica;;;;;0;;general;0;;;;0;0;;;;0;36;pim_catalog_multiselect;0;0;;;0
-smarthome;Intégration dans une Smart home;;Integratie met Smart home;;;;;0;;general;0;;;;0;0;;;;0;37;pim_catalog_multiselect;0;0;;;0
-mechvent_feed;Amenée;;Toevoer;;;;;0;;general;0;;;;0;0;;;;0;38;pim_catalog_multiselect;0;0;;;0
-diameter;Diamètre;;Diameter;;;;;0;;measurements;0;;;;0;0;;;;0;23;pim_catalog_number;0;0;;;0
-cubic_flow_max;Débit maximum;;Maximum debiet;;;;;0;;technical_properties;0;;;;0;0;;;;0;46;pim_catalog_number;0;0;;;0
-install_options;Possibilités d'installation;;Bevestigingsmogelijkheid;;;;;0;;general;0;;;;0;0;;;;0;40;pim_catalog_multiselect;0;0;;;0
-airtight_class;Classe d'étanchéité à  l'air;;Luchtdichtheidsklasse;;;;;0;;technical_properties;0;;;;0;0;;;;0;47;pim_catalog_multiselect;0;0;;;0
+smarthome;IntÃ©gration dans une Smart home;;Integratie met Smart home;;;;;0;;general;0;;;;0;0;;;;0;37;pim_catalog_multiselect;0;0;;;0
+mechvent_feed;AmenÃ©e;;Toevoer;;;;;0;;general;0;;;;0;0;;;;0;38;pim_catalog_multiselect;0;0;;;0
+diameter;DiamÃ¨tre;;Diameter;;;;;0;;measurements;0;;;;0;0;;;;0;23;pim_catalog_number;0;0;;;0
+cubic_flow_max;DÃ©bit maximum;;Maximum debiet;;;;;0;;technical_properties;0;;;;0;0;;;;0;46;pim_catalog_number;0;0;;;0
+install_options;PossibilitÃ©s d'installation;;Bevestigingsmogelijkheid;;;;;0;;general;0;;;;0;0;;;;0;40;pim_catalog_multiselect;0;0;;;0
+airtight_class;Classe d'Ã©tanchÃ©itÃ© Ã Â  l'air;;Luchtdichtheidsklasse;;;;;0;;technical_properties;0;;;;0;0;;;;0;47;pim_catalog_multiselect;0;0;;;0
 pressure_drop;Perte de charge;;Drukval;;;;;0;;assets;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 design;Design;;Design;;;;;0;;general;0;;;;0;0;;;;0;41;pim_catalog_multiselect;0;0;;;0
 net_type;Type de moustiquaire;;Gaas type;;;;;0;;general;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
@@ -139,111 +139,111 @@ acoustic_insulation;Affaiblissement acoustique;;Akoestische demping;;;;;0;;gener
 diy_type_vent;Type de grille DIY;;Type DIY Rooster;;;;;0;;general;0;;;;0;0;;;;0;44;pim_catalog_multiselect;0;1;;;0
 diy_application;Application DIY;;Toepassing DIY;;;;;0;;general;0;;;;0;0;;;;0;45;pim_catalog_multiselect;0;1;;;0
 diy_shape;Forme DIY;;Vorm DIY;;;;;0;;general;0;;;;0;0;;;;0;46;pim_catalog_multiselect;0;0;;;0
-diy_material;Matériau DIY;;Materiaal DIY;;;;;0;;general;0;;;;0;0;;;;0;47;pim_catalog_multiselect;0;1;;;0
+diy_material;MatÃ©riau DIY;;Materiaal DIY;;;;;0;;general;0;;;;0;0;;;;0;47;pim_catalog_multiselect;0;1;;;0
 diy_control;Commande DIY;;Bediening DIY;;;;;0;;general;0;;;;0;0;;;;0;48;pim_catalog_multiselect;0;0;;;0
 ordercode;Code article;;Bestelcode;;;;;0;;general;0;;;;0;0;;;;0;49;pim_catalog_text;0;0;;;0
-flow_2pa;Débit sous 2 Pa;;Debiet bij 2Pa;;;;;0;;technical_properties;0;;;;0;0;;;;0;49;pim_catalog_number;0;0;;;0
+flow_2pa;DÃ©bit sous 2 Pa;;Debiet bij 2Pa;;;;;0;;technical_properties;0;;;;0;0;;;;0;49;pim_catalog_number;0;0;;;0
 ean_code;code EAN;;EAN Code;;;;;1;;general;0;;;;0;0;;;;0;14;pim_catalog_number;0;0;;;0
 sound_level;Niveau sonore en dB;;Geluidsniveau in dB;;;;;0;;technical_properties;0;;;;0;0;;;;0;50;pim_catalog_number;0;0;;;0
-electricity_consumption;Consommation électrique en Watt;;Stroomverbruik in Watt;;;;;0;;technical_properties;0;;;;0;0;;;;0;51;pim_catalog_number;0;0;;;0
+electricity_consumption;Consommation Ã©lectrique en Watt;;Stroomverbruik in Watt;;;;;0;;technical_properties;0;;;;0;0;;;;0;51;pim_catalog_number;0;0;;;0
 sunprotection_application;Application de protection solaire;;Toepassing zonwering;;;;;0;;general;0;;;;0;0;;;;0;50;pim_catalog_simpleselect;0;1;;;0
 sunprotection_design;Design de la protection solaire;;Design kast;;;;;0;;general;0;;;;0;0;;;;0;51;pim_catalog_multiselect;0;0;;;0
 min_width_engine_inc;Largeur minimale (mm) partie avec moteur;;Minimum breedte deel met motor (mm);;;;;0;;measurements;0;;;;0;0;;;;0;24;pim_catalog_number;0;0;;;0
 min_width_engine_excl;Largeur minimale (mm) partie sans moteur;;Minimum breedte deel zonder motor (mm);;;;;0;;measurements;0;;;;0;0;;;;0;25;pim_catalog_number;0;0;;;0
 max_width_left;Largeur maximale gauche (mm);;Maximale breedte links (mm);;;;;0;;measurements;0;;;;0;0;;;;0;45;pim_catalog_number;0;0;;;0
 max_width_right;Largeur maximale droite (mm);;Maximale breedte rechts (mm);;;;;0;;measurements;0;;;;0;0;;;;0;46;pim_catalog_number;0;0;;;0
-min_protrusion;Avancée minimale (mm);;Minimum uitval (mm);;;;;0;;measurements;0;;;;0;0;;;;0;26;pim_catalog_number;0;0;;;0
-max_protrusion;Avancée maximale (mm);;Maximale uitval (mm);;;;;0;;measurements;0;;;;0;0;;;;0;27;pim_catalog_number;0;0;;;0
+min_protrusion;AvancÃ©e minimale (mm);;Minimum uitval (mm);;;;;0;;measurements;0;;;;0;0;;;;0;26;pim_catalog_number;0;0;;;0
+max_protrusion;AvancÃ©e maximale (mm);;Maximale uitval (mm);;;;;0;;measurements;0;;;;0;0;;;;0;27;pim_catalog_number;0;0;;;0
 screen_polyester_soltis;Toile polyester Soltis;;Polyesterdoek Soltis;;;;;0;;screen;0;;;;0;0;;;;0;2;pim_catalog_boolean;0;0;;;0
 controls_sunprotection;Options de commande - protection solaire;;Bedieningsopties zonwering;;;;;0;;general;0;;;;0;0;;;;0;52;pim_catalog_multiselect;0;0;;;0
 screen_insect_netting_tuff;Toile moustiquaire Tuffscreen;;Insectscreen Tuffscreen;;;;;0;;screen;0;;;;0;0;;;;0;9;pim_catalog_boolean;0;0;;;0
 screen_rensonscreen_dark;Toile polyester occultante Rensonscreen;;Verduisterend polyesterdoek Rensonscreen;;;;;0;;screen;0;;;;0;0;;;;0;7;pim_catalog_boolean;0;0;;;0
 screen_acryl;Toile acrylique;;Acryldoek;;;;;0;;screen;0;;;;0;0;;;;0;11;pim_catalog_boolean;0;0;;;0
-wind_resistance_freestanding;Résistance au vent garantie en position fermée (km/h) autoportant;;Gegarandeerde windweerstend in gesloten stand (Km/h) Freestanding;;;;;0;;technical_properties;0;;;;0;0;;;;0;52;pim_catalog_number;0;1;;;0
-wind_resistance_blackout;Résistance au vent garantie en position fermée (km/h) toile occultante;;Gegarandeerde windweerstand in gesloten stand (Km/h) Verduisterend doek;;;;;0;;technical_properties;0;;;;0;0;;;;0;53;pim_catalog_number;0;0;;;0
+wind_resistance_freestanding;RÃ©sistance au vent garantie en position fermÃ©e (km/h) autoportant;;Gegarandeerde windweerstend in gesloten stand (Km/h) Freestanding;;;;;0;;technical_properties;0;;;;0;0;;;;0;52;pim_catalog_number;0;1;;;0
+wind_resistance_blackout;RÃ©sistance au vent garantie en position fermÃ©e (km/h) toile occultante;;Gegarandeerde windweerstand in gesloten stand (Km/h) Verduisterend doek;;;;;0;;technical_properties;0;;;;0;0;;;;0;53;pim_catalog_number;0;0;;;0
 education_mandatory;Formation au montage obligatoire;;Montage opleiding verplicht;;;;;0;;general;0;;;;0;0;;;;0;53;pim_catalog_boolean;0;0;;;0
 certificate_warranty;Certificat de garantie;;Garantiecertificaat;;;;;0;;general;0;;;;0;0;;;;0;54;pim_catalog_text;0;0;;;0
-dop_declaration;Déclaration de performance (DOP);;DOP-verklaring;;;;;0;;general;0;;;;0;0;;;;0;55;pim_catalog_text;0;0;;;0
+dop_declaration;DÃ©claration de performance (DOP);;DOP-verklaring;;;;;0;;general;0;;;;0;0;;;;0;55;pim_catalog_text;0;0;;;0
 warranty;Garantie;;Productgarantie;;;;;0;;general;0;;;;0;0;;;;0;56;pim_catalog_number;0;0;;;0
 width_case;Largeur du caisson (mm);;Breedte kast (mm);;;;;0;;measurements;0;;;;0;0;;;;0;28;pim_catalog_number;0;0;;;0
 warranty_lacquer;Garantie sur le laquage;;Garantie op lakwerk;;;;;0;;general;1;;;;0;0;;;;0;57;pim_catalog_text;0;0;;;0
 warranty_engines_automation;Garantie sur les moteurs et l'automatisation;;Garantie op motoren en automatisatie;;;;;0;;general;1;;;;0;0;;;;0;58;pim_catalog_text;0;0;;;0
-screen_satine21154_dark;Toile fibre de verre occultante Satine 21154;;Verduisterend glasvezeldoek Satiné 21154;;;;;0;;screen;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;0;;;0
+screen_satine21154_dark;Toile fibre de verre occultante Satine 21154;;Verduisterend glasvezeldoek SatinÃ© 21154;;;;;0;;screen;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;0;;;0
 screen_polyester_soltis_dark;Toile polyester occultante Soltis B92;;Verduisterend polyesterdoek Soltis B92;;;;;0;;screen;0;;;;0;0;;;;0;6;pim_catalog_boolean;0;0;;;0
 mechvent_installguide;Guide d'installation;;Installatiegids;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 brochure;Brochure;;Brochure;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
-description_short;Description brève;;Korte omschrijving;;;;;0;;marketing;1;60;;;0;0;;;;0;36;pim_catalog_text;0;0;;;0
+description_short;Description brÃ¨ve;;Korte omschrijving;;;;;0;;marketing;1;60;;;0;0;;;;0;36;pim_catalog_text;0;0;;;0
 warranty_fixscreen_technology;Garantie sur la technologie Fixscreen;;Garantie op Fixscreen technologie;;;;;0;;general;0;;;;0;0;;;;0;59;pim_catalog_number;0;0;;;0
-cubic_flow_text;Débit (m3/h);;Debiet (m³/h);;;;;0;;general;1;;;;0;0;;;;0;60;pim_catalog_text;0;0;;;0
+cubic_flow_text;DÃ©bit (m3/h);;Debiet (mÂ³/h);;;;;0;;general;1;;;;0;0;;;;0;60;pim_catalog_text;0;0;;;0
 struc_options;options protection solaire structurelle;;Opties structurele zonwering;;;;;0;;general;0;;;;0;0;;;;0;61;pim_catalog_multiselect;0;0;;;0
 struc_install;Installation protection solaire structurelle;;Installatie structurele zonwering;;;;;0;;general;0;;;;0;0;;;;0;62;pim_catalog_multiselect;0;0;;;0
 struc_position_blinds;Position des lames;;Positie van de lamellen;;;;;0;;general;0;;;;0;0;;;;0;63;pim_catalog_multiselect;0;0;;;0
 blind_angle;Inclinaison des lames;;Lamelhelling;;;;;0;;general;0;;;;0;0;;;;0;64;pim_catalog_number;0;0;;;0
 clipping_type;Type de bandeau de finition;;Type sierlijst;;;;;0;;general;0;;;;0;0;;;;0;65;pim_catalog_multiselect;0;0;;;0
-clipping_material;Matériau du bandeau de finition;;Materiaal Sierlijst;;;;;0;;general;0;;;;0;0;;;;0;66;pim_catalog_multiselect;0;0;;;0
+clipping_material;MatÃ©riau du bandeau de finition;;Materiaal Sierlijst;;;;;0;;general;0;;;;0;0;;;;0;66;pim_catalog_multiselect;0;0;;;0
 console_type;Type de console;;Type console;;;;;0;;general;0;;;;0;0;;;;0;67;pim_catalog_multiselect;0;0;;;0
 frame_type;Type de cadre;;Type kader;;;;;0;;general;0;;;;0;0;;;;0;68;pim_catalog_multiselect;0;0;;;0
-slide_system;système coulissant;;Schuifsysteem;;;;;0;;general;0;;;;0;0;;;;0;69;pim_catalog_multiselect;0;0;;;0
+slide_system;systÃ¨me coulissant;;Schuifsysteem;;;;;0;;general;0;;;;0;0;;;;0;69;pim_catalog_multiselect;0;0;;;0
 frame_width;Largeur du cadre;;Breedte kader;;;;;0;;measurements;0;;;;0;0;;;;0;29;pim_catalog_number;0;0;;;0
 frame_height;Hauteur du cadre;;Hoogte kader;;;;;0;;measurements;0;;;;0;0;;;;0;30;pim_catalog_number;0;0;;;0
-frame_material;Matériau du cadre;;Materiaal kader;;;;;0;;general;0;;;;0;0;;;;0;70;pim_catalog_multiselect;0;0;;;0
-filling_material;Matériau de remplissage;;Materiaal invulling;;;;;0;;general;0;;;;0;0;;;;0;71;pim_catalog_multiselect;0;0;;;0
+frame_material;MatÃ©riau du cadre;;Materiaal kader;;;;;0;;general;0;;;;0;0;;;;0;70;pim_catalog_multiselect;0;0;;;0
+filling_material;MatÃ©riau de remplissage;;Materiaal invulling;;;;;0;;general;0;;;;0;0;;;;0;71;pim_catalog_multiselect;0;0;;;0
 buildin_depth;Profondeur d'encastrement;;Inbouwdiepte;;;;;0;;measurements;0;;;;0;0;;;;0;49;pim_catalog_number;0;0;;;0
 frame_assessment;Recouvrement du cadre;;Aanslag v/h kader;;;;;0;;general;0;;;;0;0;;;;0;72;pim_catalog_multiselect;0;0;;;0
-k_factor_exhaust_without_netting;Facteur K évacuation sans moustiquaire;;K-factor uitblaas zonder gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;57;pim_catalog_number;0;0;;;0
-k_factor_exhaust_with_netting;Facteur K évacuation avec moustiquaire;;k-factor uitblaas met gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;58;pim_catalog_number;0;0;;;0
+k_factor_exhaust_without_netting;Facteur K Ã©vacuation sans moustiquaire;;K-factor uitblaas zonder gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;57;pim_catalog_number;0;0;;;0
+k_factor_exhaust_with_netting;Facteur K Ã©vacuation avec moustiquaire;;k-factor uitblaas met gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;58;pim_catalog_number;0;0;;;0
 k_factor_suction_with_netting;Facteur K aspiration avec moustiquaire;;k-factor aanzuig met gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;59;pim_catalog_number;0;0;;;0
 k_factor_suction_without_netting;Facteur K aspiration sans moustiquaire;;k-factor aanzuig zonder gaas;;;;;1;;technical_properties;0;;;;0;0;;;;0;60;pim_catalog_number;0;0;;;0
-length_guide;Coulisses rallongées;;Verlengde geleiders;;;;;0;;general;0;;;;0;0;;;;0;10;pim_catalog_boolean;0;0;;;0
+length_guide;Coulisses rallongÃ©es;;Verlengde geleiders;;;;;0;;general;0;;;;0;0;;;;0;10;pim_catalog_boolean;0;0;;;0
 case_extension;Allongement de caisson;;Kastverlenging;;;;;0;;general;0;;;;0;0;;;;0;11;pim_catalog_boolean;0;0;;;0
 attribute_sequence;Sequence;;Volgorde;;;;;0;;marketing;0;;;;0;0;;0.0000;;0;37;pim_catalog_number;0;1;;;0
 isfilterexpanded;Is de filter uitgeklapt?;;Is de filter uitgeklapt;;;;;0;;general;1;;;;0;0;;;;0;12;pim_catalog_boolean;0;0;;;0
 glass_thickness_multi;Epaisseur de vitrage;;Glasdikte;;;;;0;;measurements;0;;;;0;0;;;;0;18;pim_catalog_multiselect;0;0;;;0
 max_length;Longueur maximale (mm);;Maximale lengte (mm);;;;;0;;measurements;0;;;;0;0;;;;0;19;pim_catalog_number;0;0;;;0
-max_length_motorised;Longueur maximale avec commande motorisée;;Max lengte bij motorbediening;;;;;0;;measurements;0;;;;0;0;;;;0;20;pim_catalog_number;0;0;;;0
+max_length_motorised;Longueur maximale avec commande motorisÃ©e;;Max lengte bij motorbediening;;;;;0;;measurements;0;;;;0;0;;;;0;20;pim_catalog_number;0;0;;;0
 usp_roosters_1;USP grilles 1;;USP roosters 1;;;;;0;;marketing;0;;;;0;0;;;;0;38;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_2;USP grilles 2;;USP roosters 2;;;;;0;;marketing;0;;;;0;0;;;;0;39;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_3;USP grilles 3;;USP Roosters 3;;;;;0;;marketing;0;;;;0;0;;;;0;40;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_4;USP grilles 4;;USP Roosters 4;;;;;0;;marketing;0;;;;0;0;;;;0;41;pim_catalog_simpleselect;0;0;;;0
-usp_roosters_else;USP supplémentaires grilles;;Overige USPs Roosters;;;;;0;;marketing;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
+usp_roosters_else;USP supplÃ©mentaires grilles;;Overige USPs Roosters;;;;;0;;marketing;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
 usp_1;USP 1;;USP 1;;;;;0;;marketing;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
 usp_2;USP 2;;USP 2;;;;;0;;marketing;0;;;;0;0;;;;0;1;pim_catalog_simpleselect;0;0;;;0
 usp_3;USP 3;;USP 3;;;;;0;;marketing;0;;;;0;0;;;;0;2;pim_catalog_simpleselect;0;0;;;0
 usp_4;USP 4;;USP 4;;;;;0;;marketing;0;;;;0;0;;;;0;3;pim_catalog_simpleselect;0;0;;;0
-usp_else;USP supplémentaires;;Overige USPs;;;;;0;;marketing;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;0;;;0
+usp_else;USP supplÃ©mentaires;;Overige USPs;;;;;0;;marketing;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;0;;;0
 usp_outdoor_1;USP 1 Outdoor;;USP 1 Outdoor;;;;;0;;marketing;0;;;;0;0;;;;0;5;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_2;USP 2 Outdoor;;USP 2 Outdoor;;;;;0;;marketing;0;;;;0;0;;;;0;6;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_3;USP 3 Outdoor;;USP 3 Outdoor;;;;;0;;marketing;0;;;;0;0;;;;0;7;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_4;USP 4 Outdoor;;USP 4 Outdoor;;;;;0;;marketing;0;;;;0;0;;;;0;8;pim_catalog_simpleselect;0;0;;;0
-usp_outdoor_else;USP supplémentaires;;Overige USPs;;;;;0;;marketing;0;;;;0;0;;;;0;9;pim_catalog_multiselect;0;0;;;0
+usp_outdoor_else;USP supplÃ©mentaires;;Overige USPs;;;;;0;;marketing;0;;;;0;0;;;;0;9;pim_catalog_multiselect;0;0;;;0
 usp_diy_1;USP DIY 1;;USP DIY 1;;;;;0;;marketing;0;;;;0;0;;;;0;10;pim_catalog_simpleselect;0;0;;;0
 usp_diy_2;USP DIY 2;;USP DIY 2;;;;;0;;marketing;0;;;;0;0;;;;0;11;pim_catalog_simpleselect;0;0;;;0
 usp_diy_3;USP DIY 3;;USP DIY 3;;;;;0;;marketing;0;;;;0;0;;;;0;12;pim_catalog_simpleselect;0;0;;;0
 usp_diy_4;USP DIY 4;;USP DIY 4;;;;;0;;marketing;0;;;;0;0;;;;0;13;pim_catalog_simpleselect;0;0;;;0
-usp_diy_else;USP supplémentaires DIY;;Overige USPs DIY;;;;;0;;marketing;0;;;;0;0;;;;0;14;pim_catalog_multiselect;0;0;;;0
+usp_diy_else;USP supplÃ©mentaires DIY;;Overige USPs DIY;;;;;0;;marketing;0;;;;0;0;;;;0;14;pim_catalog_multiselect;0;0;;;0
 usp_alu_1;USP Alu 1;;USP Alu 1;;;;;0;;marketing;0;;;;0;0;;;;0;16;pim_catalog_simpleselect;0;0;;;0
 usp_alu_2;USP Alu 2;;USP Alu 2;;;;;0;;marketing;0;;;;0;0;;;;0;17;pim_catalog_simpleselect;0;0;;;0
 usp_alu_3;USP Alu 3;;USP Alu 3;;;;;0;;marketing;0;;;;0;0;;;;0;18;pim_catalog_simpleselect;0;0;;;0
 usp_alu_4;USP Alu 4;;USP Alu 4;;;;;0;;marketing;0;;;;0;0;;;;0;19;pim_catalog_simpleselect;0;0;;;0
-usp_alu_else;USP supplémentaires alu;;Overige USPs alu;;;;;0;;marketing;0;;;;0;0;;;;0;20;pim_catalog_multiselect;0;0;;;0
-vent_usp_1;USP Aérateurs 1;;USP  Vent  1;;;;;0;;marketing;0;;;;0;0;;;;0;21;pim_catalog_simpleselect;0;0;;;0
-vent_usp_2;USP Aérateurs 2;;USP Vent 2;;;;;0;;marketing;0;;;;0;0;;;;0;22;pim_catalog_simpleselect;0;0;;;0
-vent_usp_3;USP Aérateurs 3;;USP Vent 3;;;;;0;;marketing;0;;;;0;0;;;;0;23;pim_catalog_simpleselect;0;0;;;0
-vent_usp_4;USP Aérateurs 4;;USP Vent 4;;;;;0;;marketing;0;;;;0;0;;;;0;24;pim_catalog_simpleselect;0;0;;;0
-vent_usp_else;USPs supplémentaires Aérateurs;;Overige USPs Vent ilatie;;;;;0;;marketing;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
-mechvent_usp_1;USP Ventilation mécanique 1;;USP Mech vent 1;;;;;0;;marketing;0;;;;0;0;;;;0;26;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_2;USP Ventilation mécanique 2;;USP Mech vent 2;;;;;0;;marketing;0;;;;0;0;;;;0;27;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_3;USP Ventilation mécanique 3;;USP Mech vent 3;;;;;0;;marketing;0;;;;0;0;;;;0;28;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_4;USP Ventilation mécanique 4;;USP Mech vent 4;;;;;0;;marketing;0;;;;0;0;;;;0;29;pim_catalog_simpleselect;0;0;;;0
+usp_alu_else;USP supplÃ©mentaires alu;;Overige USPs alu;;;;;0;;marketing;0;;;;0;0;;;;0;20;pim_catalog_multiselect;0;0;;;0
+vent_usp_1;USP AÃ©rateurs 1;;USP  Vent  1;;;;;0;;marketing;0;;;;0;0;;;;0;21;pim_catalog_simpleselect;0;0;;;0
+vent_usp_2;USP AÃ©rateurs 2;;USP Vent 2;;;;;0;;marketing;0;;;;0;0;;;;0;22;pim_catalog_simpleselect;0;0;;;0
+vent_usp_3;USP AÃ©rateurs 3;;USP Vent 3;;;;;0;;marketing;0;;;;0;0;;;;0;23;pim_catalog_simpleselect;0;0;;;0
+vent_usp_4;USP AÃ©rateurs 4;;USP Vent 4;;;;;0;;marketing;0;;;;0;0;;;;0;24;pim_catalog_simpleselect;0;0;;;0
+vent_usp_else;USPs supplÃ©mentaires AÃ©rateurs;;Overige USPs Vent ilatie;;;;;0;;marketing;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
+mechvent_usp_1;USP Ventilation mÃ©canique 1;;USP Mech vent 1;;;;;0;;marketing;0;;;;0;0;;;;0;26;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_2;USP Ventilation mÃ©canique 2;;USP Mech vent 2;;;;;0;;marketing;0;;;;0;0;;;;0;27;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_3;USP Ventilation mÃ©canique 3;;USP Mech vent 3;;;;;0;;marketing;0;;;;0;0;;;;0;28;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_4;USP Ventilation mÃ©canique 4;;USP Mech vent 4;;;;;0;;marketing;0;;;;0;0;;;;0;29;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_1;USP Bardage 1;;USP Gevelbekleding 1;;;;;0;;marketing;0;;;;0;0;;;;0;31;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_2;USP Bardage 2;;USP Gevelbekleding 2;;;;;0;;marketing;0;;;;0;0;;;;0;32;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_3;USP Bardage 3;;USP Gevelbekleding 3;;;;;0;;marketing;0;;;;0;0;;;;0;33;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_4;USP Bardage 4;;USP Gevelbekleding 4;;;;;0;;marketing;0;;;;0;0;;;;0;34;pim_catalog_simpleselect;0;0;;;0
-usp_gevelbekleding_else;USPs supplémentaires Bardage;;Overige USPs Gevelbekleding;;;;;0;;marketing;0;;;;0;0;;;;0;35;pim_catalog_multiselect;0;0;;;0
+usp_gevelbekleding_else;USPs supplÃ©mentaires Bardage;;Overige USPs Gevelbekleding;;;;;0;;marketing;0;;;;0;0;;;;0;35;pim_catalog_multiselect;0;0;;;0
 control_ss;Manoeuvre SS;;Bediening SS;;;;;0;;general;0;;;;0;0;;;;0;1;pim_catalog_simpleselect;0;0;;;0
 sunprotection_design_ss;SS caisson design SS;;Design kast SS;;;;;0;;general;0;;;;0;0;;;;0;2;pim_catalog_simpleselect;0;0;;;0
 joinable_ss;Couplable SS;;Koppelbaar SS;;;;;0;;general;0;;;;0;0;;;;0;3;pim_catalog_simpleselect;0;0;;;0
-isFilter;Est utilisé comme filtre;;Wordt gebruikt als filter;;;;;0;;general;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;1;;;0
+isFilter;Est utilisÃ© comme filtre;;Wordt gebruikt als filter;;;;;0;;general;0;;;;0;0;;;;0;5;pim_catalog_boolean;0;1;;;0
 type_endura_delta;Type Endura Delta;;Type Endura Delta;;;;;0;;variant_group;0;;;;0;0;;;;0;6;pim_catalog_simpleselect;0;0;;;0
 freestanding;Autoportant;;Vrijstaand;;;;;0;;general;0;;;;0;0;;;;0;7;pim_catalog_simpleselect;0;1;;;0
 builtin_height;hauteur d'encastrement;;Inbouwhoogte;;;;;0;;measurements;0;;;;0;0;;;;0;1;pim_catalog_number;0;0;;;0
@@ -253,70 +253,70 @@ thickness_roof;Epaisseur de la toiture;;Dikte dakschil;;;;;0;;measurements;0;;;;
 min_angle;Angle minimal d'inclinaison;;Minimum hellingshoek;;;;;0;;measurements;0;;;;0;0;;;;0;5;pim_catalog_number;0;0;;;0
 roof_opening;Ouverture dans la toiture (en mm);;Dakopening (in mm);;;;;0;;measurements;0;;;;0;0;;;;0;6;pim_catalog_number;0;0;;;0
 velux_module;Module Velux;;Velux Module;;;;;0;;general;0;;;;0;0;;;;0;8;pim_catalog_simpleselect;0;0;;;0
-systeem_slidefix;Système Slidefix;;Slidefix Systeem;;;;;0;;general;0;;;;0;0;;;;0;9;pim_catalog_simpleselect;0;0;;;0
+systeem_slidefix;SystÃ¨me Slidefix;;Slidefix Systeem;;;;;0;;general;0;;;;0;0;;;;0;9;pim_catalog_simpleselect;0;0;;;0
 min_width_screen;Largeur minimale de la toile (mm);;Minimum breedte doek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;7;pim_catalog_number;0;0;;;0
 min_height_screen;Hauteur minimale de la toile (mm);;Minimum hoogte doek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;8;pim_catalog_number;0;0;;;0
 max_height_screen;Hauteur maximale de la toile (mm);;Maximum hoogte doek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;9;pim_catalog_number;0;0;;;0
 max_width_screen;Largeur maximale de la toile (mm);;Maximum breedte doek (mm);;;;;0;;measurements;0;;;;0;0;;;;0;10;pim_catalog_number;0;0;;;0
-compatibel_thickness_window;Epaisseurs de châssis compatibles (mm);;Compatibele raamdiktes (mm);;;;;0;;measurements;0;;;;0;0;;;;0;11;pim_catalog_number;0;0;;;0
+compatibel_thickness_window;Epaisseurs de chÃ¢ssis compatibles (mm);;Compatibele raamdiktes (mm);;;;;0;;measurements;0;;;;0;0;;;;0;11;pim_catalog_number;0;0;;;0
 max_length_traverse_installatie;Longueur maximale avec montage entre traverses;;Max. lengte bij traverse installatie;;;;;0;;measurements;0;;;;0;0;;;;0;12;pim_catalog_number;0;0;;;0
-diameter_attachment_multi;Diamètre de raccordement;;Diameter aansluiting;;;;;0;;technical_properties;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
+diameter_attachment_multi;DiamÃ¨tre de raccordement;;Diameter aansluiting;;;;;0;;technical_properties;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
 download_requires_credentials;Login obligatoire;;Login verplicht;;;;;0;;other;0;;;;0;0;;;;0;0;pim_catalog_boolean;0;0;;;0
 type_lamel_SS;SS Type de lame SS;;Type lamel SS;;;;;0;;general;1;;;;0;0;;;;0;4;pim_catalog_simpleselect;0;1;;;0
 type_lamel_variant;SS Type de lame SS;;Type lamel   SS;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;1;;;0
 rooster_kleur_variant;Couleur de grille;;Kleur rooster;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;1;;;0
 height_variant;Hauteur;;Hoogte;;;;;0;;measurements;0;;;;0;0;;;;0;13;pim_catalog_simpleselect;0;1;;;0
 width_variant;Largeur - variante;;Breedte variant;;;;;0;;measurements;0;;;;0;0;;;;0;14;pim_catalog_simpleselect;0;1;;;0
-diameter_variant;Diamètre;;Diameter;;;;;0;;measurements;0;;;;0;0;;;;0;15;pim_catalog_simpleselect;0;1;;;0
+diameter_variant;DiamÃ¨tre;;Diameter;;;;;0;;measurements;0;;;;0;0;;;;0;15;pim_catalog_simpleselect;0;1;;;0
 install_ss;Situation de montage;;Montagesituatie;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
-control_industrial_vents;Commande des grilles industrielles;;Bediening industriële roosters;;;;;0;;control;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;1;;;0
+control_industrial_vents;Commande des grilles industrielles;;Bediening industriÃ«le roosters;;;;;0;;control;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;1;;;0
 length_semidec;Longueur Semidec;;Semidec lengte;;;;;0;;measurements;0;;;;0;0;;;;0;16;pim_catalog_simpleselect;0;1;;;0
-connectable;Montage côte à côte;;Aaneenschakelbaar;;;;;0;;measurements;0;;;;0;0;;;;0;17;pim_catalog_boolean;0;0;;;0
+connectable;Montage cÃ´te Ã  cÃ´te;;Aaneenschakelbaar;;;;;0;;measurements;0;;;;0;0;;;;0;17;pim_catalog_boolean;0;0;;;0
 maximum_total_width;Largeur totale maximale;;Maximale total breedte;;;;;0;;measurements;0;;;;0;0;;;;0;0;pim_catalog_number;0;0;;;0
-usp_gevelbekleding_variant;USP revêtement de faà§ade;;USP Gevelbekleding overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;48;pim_catalog_multiselect;0;0;;;0
+usp_gevelbekleding_variant;USP revÃªtement de faÃ Â§ade;;USP Gevelbekleding overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;48;pim_catalog_multiselect;0;0;;;0
 usp_diy_variant;USP DIY global;;USP DIY overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;47;pim_catalog_multiselect;0;0;;;0
 usp_roosters_1_variant;USP grilles 1 global;;USP roosters 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;38;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_2_variant;USP grilles 2 global;;USP roosters 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;39;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_3_variant;USP grilles 3 global;;USP Roosters 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;40;pim_catalog_simpleselect;0;0;;;0
 usp_roosters_4_variant;USP grilles 4 global;;USP Roosters 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;41;pim_catalog_simpleselect;0;0;;;0
-usp_roosters_else_variant;USPs supplémentaires grilles global;;Overige USPs Roosters overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
+usp_roosters_else_variant;USPs supplÃ©mentaires grilles global;;Overige USPs Roosters overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;42;pim_catalog_multiselect;0;0;;;0
 usp_1_variant;USP 1;;USP 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
 usp_2_variant;USP 2;;USP 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;1;pim_catalog_simpleselect;0;0;;;0
 usp_3_variant;USP 3;;USP 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;2;pim_catalog_simpleselect;0;0;;;0
 usp_4_variant;USP 4;;USP 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;3;pim_catalog_simpleselect;0;0;;;0
-usp_else_variant;USPs supplémentaires global;;Overige USPs overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;0;;;0
+usp_else_variant;USPs supplÃ©mentaires global;;Overige USPs overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;4;pim_catalog_multiselect;0;0;;;0
 usp_outdoor_1_variant;USP 1 Outdoor global;;USP 1 Outdoor overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;5;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_2_variant;USP 2 Outdoor global;;USP 2 Outdoor overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;6;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_3_variant;USP 3 Outdoor global;;USP 3 Outdoor overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;7;pim_catalog_simpleselect;0;0;;;0
 usp_outdoor_4_variant;USP 4 Outdoor global;;USP 4 Outdoor overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;8;pim_catalog_simpleselect;0;0;;;0
-usp_outdoor_else_variant;USPs supplémentaires Outdoor global;;Overige USPs   Outdoor  overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;9;pim_catalog_multiselect;0;0;;;0
+usp_outdoor_else_variant;USPs supplÃ©mentaires Outdoor global;;Overige USPs   Outdoor  overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;9;pim_catalog_multiselect;0;0;;;0
 usp_diy_1_variant;USP DIY 1 global;;USP DIY 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;10;pim_catalog_simpleselect;0;0;;;0
 usp_diy_2_variant;USP DIY 2 global;;USP DIY 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;11;pim_catalog_simpleselect;0;0;;;0
 usp_diy_3_variant;USP DIY 3 global;;USP DIY 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;12;pim_catalog_simpleselect;0;0;;;0
 usp_diy_4_variant;USP DIY 4 global;;USP DIY 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;13;pim_catalog_simpleselect;0;0;;;0
-usp_diy_else_variant;USPs supplémentaires DIY global;;Overige USPs DIY overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;14;pim_catalog_multiselect;0;0;;;0
+usp_diy_else_variant;USPs supplÃ©mentaires DIY global;;Overige USPs DIY overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;14;pim_catalog_multiselect;0;0;;;0
 usp_alu_1_variant;USP Alu 1 global;;USP Alu 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;16;pim_catalog_simpleselect;0;0;;;0
 usp_alu_2_variant;USP Alu 2 global;;USP Alu 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;17;pim_catalog_simpleselect;0;0;;;0
 usp_alu_3_variant;USP Alu 3 global;;USP Alu 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;18;pim_catalog_simpleselect;0;0;;;0
 usp_alu_4_variant;USP Alu 4 global;;USP Alu 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;19;pim_catalog_simpleselect;0;0;;;0
-usp_alu_else_variant;USPs supplémentaires Alu global;;Overige USPs Alu overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;20;pim_catalog_multiselect;0;0;;;0
-vent_usp_1_variant;USP Aérateurs 1 global;;USP Vent 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;21;pim_catalog_simpleselect;0;0;;;0
-vent_usp_2_variant;USP Aérateurs 2 global;;USP Vent 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;22;pim_catalog_simpleselect;0;0;;;0
-vent_usp_3_variant;USP Aérateurs 3 global;;USP Vent 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;23;pim_catalog_simpleselect;0;0;;;0
-vent_usp_4_variant;USP Aérateurs 4 global;;USP Vent 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;24;pim_catalog_simpleselect;0;0;;;0
-vent_usp_else_variant;USPs supplémentaires Aérateurs global;;Overige USPs Vent ilatie  overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
-mechvent_usp_1_variant;USP Ventilation mécanique 1 global;;USP Mech vent 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;26;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_2_variant;USP Ventilation mécanique 2 global;;USP Mech vent 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;27;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_3_variant;USP Ventilation mécanique 3 global;;USP Mech vent 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;28;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_4_variant;USP Ventilation mécanique 4 global;;USP Mech vent 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;29;pim_catalog_simpleselect;0;0;;;0
-mechvent_usp_else_variant;USPs supplémentaires Ventilation mécanique global;;Overige USPs Mech vent overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;30;pim_catalog_multiselect;0;0;;;0
+usp_alu_else_variant;USPs supplÃ©mentaires Alu global;;Overige USPs Alu overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;20;pim_catalog_multiselect;0;0;;;0
+vent_usp_1_variant;USP AÃ©rateurs 1 global;;USP Vent 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;21;pim_catalog_simpleselect;0;0;;;0
+vent_usp_2_variant;USP AÃ©rateurs 2 global;;USP Vent 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;22;pim_catalog_simpleselect;0;0;;;0
+vent_usp_3_variant;USP AÃ©rateurs 3 global;;USP Vent 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;23;pim_catalog_simpleselect;0;0;;;0
+vent_usp_4_variant;USP AÃ©rateurs 4 global;;USP Vent 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;24;pim_catalog_simpleselect;0;0;;;0
+vent_usp_else_variant;USPs supplÃ©mentaires AÃ©rateurs global;;Overige USPs Vent ilatie  overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;25;pim_catalog_multiselect;0;0;;;0
+mechvent_usp_1_variant;USP Ventilation mÃ©canique 1 global;;USP Mech vent 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;26;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_2_variant;USP Ventilation mÃ©canique 2 global;;USP Mech vent 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;27;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_3_variant;USP Ventilation mÃ©canique 3 global;;USP Mech vent 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;28;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_4_variant;USP Ventilation mÃ©canique 4 global;;USP Mech vent 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;29;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_else_variant;USPs supplÃ©mentaires Ventilation mÃ©canique global;;Overige USPs Mech vent overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;30;pim_catalog_multiselect;0;0;;;0
 usp_gevelbekleding_1_variant;USP Bardage 1 global;;USP Gevelbekleding 1 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;31;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_2_variant;USP Bardage 2 global;;USP Gevelbekleding 2 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;32;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_3_variant;USP Bardage 3 global;;USP Gevelbekleding 3 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;33;pim_catalog_simpleselect;0;0;;;0
 usp_gevelbekleding_4_variant;USP Bardage 4 global;;USP Gevelbekleding 4 overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;34;pim_catalog_simpleselect;0;0;;;0
-usp_gevelbekleding_else_variant;USPs supplémentaires Bardage global;;Overige USPs Gevelbekleding overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;35;pim_catalog_multiselect;0;0;;;0
+usp_gevelbekleding_else_variant;USPs supplÃ©mentaires Bardage global;;Overige USPs Gevelbekleding overkoepelend;;;;;0;;variant_group;0;;;;0;0;;;;0;35;pim_catalog_multiselect;0;0;;;0
 variant_description;Description;;Lange omschrijving variantgroup;;;;;0;;variant_group;1;;;;0;0;;;;0;45;pim_catalog_textarea;0;0;;;0
-variant_description_short;Description brève du groupe de variante;;Korte omschrijving variantgroup;;;;;0;;variant_group;1;;;;0;0;;;;0;46;pim_catalog_text;0;0;;;0
+variant_description_short;Description brÃ¨ve du groupe de variante;;Korte omschrijving variantgroup;;;;;0;;variant_group;1;;;;0;0;;;;0;46;pim_catalog_text;0;0;;;0
 variant_image_1;Image 1;;Afbeelding 1;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 variant_image_2;Image 2;;Afbeelding 2;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 variant_image_3;Image 3;;Afbeelding 3;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
@@ -327,21 +327,21 @@ BIM_2016;BIM 2016;;BIM 2016;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;
 BIM_2017;BIM 2017;;BIM 2017;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 BIM_2018;BIM 2018;;BIM 2018;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 sunp_technology;Technologie;;Technologie;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
-mechvent_usp_else;USP supplémentaires ventilation mécanique;;Overige USPs Mechanische ventilatie;;;;;0;;marketing;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
-vent_size_type;Exécution;;Uitvoering;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
-vent_type_variant;Exécution (Basic/High/Ultra/Extreme);;Uitvoering (Basic/High/Ultra/Extreme);;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
+mechvent_usp_else;USP supplÃ©mentaires ventilation mÃ©canique;;Overige USPs Mechanische ventilatie;;;;;0;;marketing;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
+vent_size_type;ExÃ©cution;;Uitvoering;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
+vent_type_variant;ExÃ©cution (Basic/High/Ultra/Extreme);;Uitvoering (Basic/High/Ultra/Extreme);;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
 variant_type_acoustic;Variante type d'affaiblissement acoustique;;Variant type geluidsdemping;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
 variant_type_placement;Variante installation;;Variant plaatsing;;;;;0;;variant_group;0;;;;0;0;;;;0;0;pim_catalog_simpleselect;0;0;;;0
-depth_beugel;Profondeur de l'équerre (mm);;Diepte beugel (mm);;;;;0;;measurements;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
+depth_beugel;Profondeur de l'Ã©querre (mm);;Diepte beugel (mm);;;;;0;;measurements;0;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 type_aansluiting;Type de raccordement;;Type aansluiting;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
-type_uitvoering;Type d'exécution;;Type uitvoering;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
-preheater;préchauffage;;Preheater;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
+type_uitvoering;Type d'exÃ©cution;;Type uitvoering;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
+preheater;prÃ©chauffage;;Preheater;;;;;0;;general;0;;;;0;0;;;;0;0;pim_catalog_multiselect;0;0;;;0
 tech_drawing;Dessin technique;;Technische tekening;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 manual;Manuel;;Handleiding;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 specification_text;Cahier des charges;;Bestek;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
-video;Vidéo;;Video;;;;;0;;marketing;1;;;;0;0;;;;0;43;pim_catalog_text;0;0;;url;0
+video;VidÃ©o;;Video;;;;;0;;marketing;1;;;;0;0;;;;0;43;pim_catalog_text;0;0;;url;0
 dwg_files;Fichier DWG;;DWG Bestanden;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
-ecolabel;Label écologique;;Ecolabel;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
+ecolabel;Label Ã©cologique;;Ecolabel;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 test_report_1;Rapport de test 1;;Test rapport 1;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0
 test_report_3;Rapport de test 3;;Test rapport 3;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;;0
 test_report_4;Rapport de test 4;;Test rapport 4;;;;;0;;assets;1;;;;0;0;;;;0;0;pim_catalog_text;0;0;;url;0

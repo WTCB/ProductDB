@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Property {
 	
-	public static List<Property> propList = new ArrayList<Property>();
+	//public static List<Property> propList = new ArrayList<Property>();
 	
 	public String id;
 	public String name;
@@ -16,11 +16,11 @@ public class Property {
 	public String externalDocument;
 
 	public Property() {
-		propList.add(this);
+		//propList.add(this);
 	}	
 
 	public Property(String id, String name, String unit, String value, String category, String externalDocument) {
-		propList.add(this);
+		//propList.add(this);
 		this.id = id;
 		this.name = name;
 		this.unit = unit;
@@ -28,5 +28,4 @@ public class Property {
 		this.category = category;
 		this.externalDocument = externalDocument;
 	}
-
 }

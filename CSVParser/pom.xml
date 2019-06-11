@@ -14,37 +14,38 @@
   <description>project that loads a bunch of sample data (e.g. CSV files from relatics) and pushes them into a local neo4j data store</description>
 
   <dependencies>
-    
-    <!-- Spring Boot 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-	-->
 
-    <!-- Spring Neo4J
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-neo4j-rest</artifactId>
-      <version>3.4.4.RELEASE</version>
-    </dependency> -->
-	
-	<!-- https://mvnrepository.com/artifact/org.neo4j.driver/neo4j-java-driver -->
 	<dependency>
 		<groupId>org.neo4j.driver</groupId>
 		<artifactId>neo4j-java-driver</artifactId>
 		<version>1.6.1</version>
 	</dependency>
-	
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.9.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.9.6</version>
+    </dependency>
+
   </dependencies>
   
   <build>
-    <!--<plugins>
+    <plugins>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
       </plugin>
-    </plugins>-->
+    </plugins>
     <resources>
       <resource>
         <directory>src/main/resources</directory>
@@ -52,5 +53,6 @@
       </resource>
     </resources>
   </build>
-  
+
+
 </project>

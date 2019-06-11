@@ -23,8 +23,17 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-middleware/target/classes/*
+TechDat/target/classes/*
+TechDat/.idea/*
+
 CSVParser/.idea/*
+
 node_modules/*
+
 front/.idea/*
-middleware/.idea/*
+
+APIs/Gyproc/.idea/*
+APIs/Gyproc/target/classes/*
+
+APIs/SVK/.idea/*
+APIs/SVK/target/classes/*
