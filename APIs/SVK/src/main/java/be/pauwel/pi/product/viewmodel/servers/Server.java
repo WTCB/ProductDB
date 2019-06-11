@@ -36,7 +36,7 @@ public class Server {
         s.username = "neo4j";
         s.password = "neo4j";
         s.driver = GraphDatabase.driver( s.URL, AuthTokens.basic( s.username, s.password ) );
-        Company c = Company.getCompany("Gyproc");
+        Company c = Company.getCompany("SVK");
         s.company = c;
         c.setServer(s);
     }

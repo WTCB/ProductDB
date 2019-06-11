@@ -39,23 +39,22 @@ public class ProductServiceImpl implements ProductService {
                 p.names.add(new Name(n.get("nameFR").asString(), "fr"));
                 p.names.add(new Name(n.get("nameNL").asString(), "nl"));
                 p.id = n.get("id").asString();
-                p.intrastatNumber = n.get("intrastatNummer").asString();
-                p.publicationDate = n.get("publicationDate").asString();
-                p.gtin = new GTIN(n.get("EAN").asString(), n.get("EANEenheid").asString());
+                //MISSING p.intrastatNumber = n.get("intrastatNummer").asString();
+                //MISSING p.publicationDate = n.get("publicationDate").asString();
+                //MISSING p.gtin = new GTIN(n.get("EAN").asString(), n.get("EANEenheid").asString());
                 String dopurlnl = n.get("DOPURLNL").asString();
                 if (dopurlnl != null && !dopurlnl.isEmpty() && dopurlnl != "null") {
-                    String dopurlnlnumber = dopurlnl.split("\\?DOP=")[1].split("_NL.pdf")[0];
-                    p.dop = new DOP(dopurlnlnumber);
-                    p.dop.URL.add(new Url(dopurlnl, "nl"));
+                    //String dopurlnlnumber = dopurlnl.split("\\?DOP=")[1].split("_NL.pdf")[0];
+                    p.dop = new DOP(n.get("DOPNumber").asString());
+                    p.dop.URL.add(new Url(dopurlnl, "en"));
                 }
-                String dopurlfr = n.get("DOPURLFR").asString();
-                if (dopurlfr != null && !dopurlfr.isEmpty() && dopurlfr != "null") {
-                    String dopurlfrnumber = dopurlnl.split("\\?DOP=")[1].split("_FR.pdf")[0];
-                    p.dop.URL.add(new Url(dopurlfr, "fr"));
-                }
-                p.images.add(new Image("image", n.get("image").asString()));
-                p.edition = n.get("edition").asString();
-                p.categories.add("ETIM: Gypsum cardboard board");
+                //MISSING String dopurlfr = n.get("DOPURLFR").asString();
+                //MISSING if (dopurlfr != null && !dopurlfr.isEmpty() && dopurlfr != "null") {
+                //MISSING     String dopurlfrnumber = dopurlnl.split("\\?DOP=")[1].split("_FR.pdf")[0];
+                //MISSING     p.dop.URL.add(new Url(dopurlfr, "fr"));
+                //MISSING }
+                //MISSING p.images.add(new Image("image", n.get("image").asString()));
+                //MISSING p.edition = n.get("edition").asString();
                 p.categories.add(n.get("typeFR").asString());
                 p.categories.add(n.get("typeNL").asString());
                 p.typeID = n.get("typeID").asString();
@@ -64,16 +63,6 @@ public class ProductServiceImpl implements ProductService {
 
         return Product.prodList;
     }
-
-    /*private void getProductsFromCompany(String name, Server server){
-        //TODO: enable retrieving products from other companies
-        if(!name.equalsIgnoreCase("Gyproc"))
-            return;
-
-        if(server.theDBType.name.equalsIgnoreCase("neo4j")){
-
-        }
-    }*/
 }
 
 

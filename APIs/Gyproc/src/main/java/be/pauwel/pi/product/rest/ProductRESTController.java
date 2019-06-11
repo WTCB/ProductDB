@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE, value = "/Gyproc/ws/products")
+@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE, value = "/gyproc/ws/products")
 public class ProductRESTController {
 
     @Autowired
