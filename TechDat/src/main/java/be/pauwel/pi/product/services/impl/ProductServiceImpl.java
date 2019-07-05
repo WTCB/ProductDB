@@ -3,104 +3,147 @@ package be.pauwel.pi.product.services.impl;
 import be.pauwel.pi.product.services.ProductService;
 import be.pauwel.pi.product.viewmodel.data.*;
 import be.pauwel.pi.product.viewmodel.servers.Server;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
 import org.neo4j.driver.v1.*;
 import org.neo4j.driver.v1.types.*;
 
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.*;
+import java.util.*;
+import javax.net.ssl.HttpsURLConnection;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    /*@Override
-    public List<Product> getAllProducts() {
-
-        try (Session session = Server.serverList.get(0).driver.session())
-        {
-            // Auto-commit transactions are a quick and easy way to wrap a read.
-            //WHERE a.name STARTS WITH {x}
-            StatementResult result = session.run(
-                    "MATCH (a:Subject) <-[hasProduct]- (c:Company) " +
-                            "RETURN a.nameNL as name");
-
-
-            //<id>:195EAN: 5413218577458EANEenheid: STPIBURLFR: http://www.gyproc.be/downloadpib?PIB=G132294&TYPE=PDFFRPIBURLNL: http://www.gyproc.be/downloadpib?PIB=G132294&TYPE=PDFNLdescriptionFR: Amélioration acoustique dans des pièces existantesdescriptionNL: Akoestische verbetering in bestaande ruimtesedition: 0.1id: G132294image: http://www.gyproc.be/downloadpib?PIB=G132294&TYPE=IMGintrastatNummer: 68091900nameFR: Gyptone® InstantnameNL: Gyptone® InstantpublicationDate: 2019-02-15T16:54:45.374
-
-            //MATCH (wallstreet:Movie { title: 'Wall Street' })<-[:ACTED_IN]-(actor)
-            //    RETURN actor.name
-            // Each Cypher execution returns a stream of records.
-            while (result.hasNext())
-            {
-                Record record = result.next();
-                Product p = new Product();
-                System.out.println(record.get("name").asString());
-            }
-        }
-
-        return Product.prodList;
-    }*/
+    private final String USER_AGENT = "Mozilla/5.0";
 
     @Override
-    public List<Product> getAllProducts() {
-
-        Product.prodList.clear();
+    public List<Product> getAllProductsWithoutProps() {
+        List<Product> prodList = new ArrayList<Product>();
 
         for(Company c:Company.companyList){
-            getProductsFromCompany(c.getName(),c.getServer());
+            if(c.getServer()!=null)
+                prodList.addAll(getProductsFromCompany(c.getName(),c.getServer(), false));
         }
 
-        return Product.prodList;
+        return prodList;
     }
 
-    private void getProductsFromCompany(String name, Server server){
-        //TODO: enable retrieving products from other companies
-        if(!name.equalsIgnoreCase("Gyproc"))
-            return;
+    @Override
+    public List<Product> getAllProductsWithProps() {
+        List<Product> prodList = new ArrayList<Product>();
 
-        if(server.theDBType.name.equalsIgnoreCase("neo4j")){
-            try (Session session = server.driver.session()) {
+        for(Company c:Company.companyList){
+            if(c.getServer()!=null)
+                prodList.addAll(getProductsFromCompany(c.getName(), c.getServer(), true));
+        }
 
-                // Auto-commit transactions are a quick and easy way to wrap a read.
-                //WHERE a.name STARTS WITH {x}
-                StatementResult result = session.run(
-                        "MATCH (a:Subject) <-[hasProduct]- (c:Company { name: '"+name+"' }) " +
-                                "RETURN a");
+        return prodList;
+    }
 
-                // Each Cypher execution returns a stream of records.
-                while (result.hasNext()) {
-                    Record record = result.next();
-                    Node n = record.get(0).asNode();
-                    //System.out.println(n.keys());
-                    //System.out.println(n.values());
-                    Product p = new Product();
-                    p.names.add(new Name(n.get("nameFR").asString(), "fr"));
-                    p.names.add(new Name(n.get("nameNL").asString(), "nl"));
-                    p.id = n.get("id").asString();
-                    p.intrastatNumber = n.get("intrastatNummer").asString();
-                    p.publicationDate = n.get("publicationDate").asString();
-                    p.gtin = new GTIN(n.get("EAN").asString(), n.get("EANEenheid").asString());
-                    String dopurlnl = n.get("DOPURLNL").asString();
-                    if (dopurlnl != null && !dopurlnl.isEmpty() && dopurlnl != "null") {
-                        String dopurlnlnumber = dopurlnl.split("\\?DOP=")[1].split("_NL.pdf")[0];
-                        p.dop = new DOP(dopurlnlnumber);
-                        p.dop.URL.add(new Url(dopurlnl, "nl"));
-                    }
-                    String dopurlfr = n.get("DOPURLFR").asString();
-                    if (dopurlfr != null && !dopurlfr.isEmpty() && dopurlfr != "null") {
-                        String dopurlfrnumber = dopurlnl.split("\\?DOP=")[1].split("_FR.pdf")[0];
-                        p.dop.URL.add(new Url(dopurlfr, "fr"));
-                    }
-                    p.images.add(new Image("image", n.get("image").asString()));
-                    p.edition = n.get("edition").asString();
-                    p.categories.add("ETIM: Gypsum cardboard board");
-                    p.categories.add(n.get("typeFR").asString());
-                    p.categories.add(n.get("typeNL").asString());
-                    p.typeID = n.get("typeID").asString();
+    @Override
+    public List<Product> getAllProductsWithProperties(List<Property> properties) {
+        List<Product> prodList = new ArrayList<Product>();
+
+        for(Company c:Company.companyList){
+            getProductsFromCompany(c.getName(),c.getServer(), true);
+        }
+
+        return prodList;
+    }
+
+    @Override
+    public Product getProductWithId(String id) {
+        List<Product> prodList = new ArrayList<Product>();
+
+        //G124584
+
+        for(Company c:Company.companyList){
+            if(c.getServer()!=null) {
+                prodList.addAll(getProductsFromCompany(c.getName(), c.getServer(),true));
+                for(Product p : prodList){
+                    if(p.id.equalsIgnoreCase(id))
+                        return p;
                 }
             }
         }
+
+        return null;
     }
+
+    private List<Product> getProductsFromCompany(String name, Server server, boolean withProps){
+        List<Product> listProducts = null;
+
+        try{
+            String url = server.URL + "/ws/products";// "http://www.google.com/search?q=mkyong";
+
+            URL baseUri = new URL(url);
+            HashMap<String,String> urlParameters = new HashMap<>();
+            urlParameters.put("withProps", String.valueOf(withProps));
+            URI uri = applyParameters(baseUri, urlParameters);
+            HttpURLConnection con = (HttpURLConnection) uri.toURL().openConnection();
+
+            con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", USER_AGENT);
+
+            int responseCode = con.getResponseCode();
+            System.out.println("\nSending 'GET' request to URL : " + url);
+            System.out.println("Response Code : " + responseCode);
+
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            ObjectMapper objectMapper = new ObjectMapper();
+            String json = response.toString();
+            listProducts = objectMapper.readValue(json, new TypeReference<List<Product>>(){});
+
+            return listProducts;
+        }
+        catch (IOException fio){
+            System.err.println("IOException");
+        }
+
+        return listProducts;
+    }
+
+    private URI applyParameters(URL baseUri, HashMap<String,String> urlParameters){
+        StringBuilder query = new StringBuilder();
+        boolean first = true;
+
+        Iterator it = urlParameters.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+
+            if (first) {
+                first = false;
+            } else {
+                query.append("&");
+            }
+
+            query.append(pair.getKey()).append("=").append(pair.getValue());
+        }
+
+        try {
+            return baseUri.toURI().resolve(query.toString());
+        }
+        catch (URISyntaxException ex) {
+            throw new RuntimeException(ex);
+        }
+}
+
 }
 
 

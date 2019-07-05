@@ -8,19 +8,77 @@ import org.springframework.stereotype.Service;
 import org.neo4j.driver.v1.*;
 import org.neo4j.driver.v1.types.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
     @Override
-    public List<Product> getAllProducts() {
+    public List<Product> getAllProductsWithProps() {
+        Product.prodList.clear();
+
+        Server server = Company.companyList.get(0).getServer();
+        String name = Company.companyList.get(0).getName();
+
+        GetAllProducts(server, name);
+
+        for(Product p : Product.prodList){
+            List<Property> propList =
+            addProperties(p);
+            p.properties.addAll(propList);
+            System.out.println("finished Product property : " + p.id);
+        }
+
+        return Product.prodList;
+    }
+
+    @Override
+    public List<Product> getAllProductsWithoutProps() {
 
         Product.prodList.clear();
 
         Server server = Company.companyList.get(0).getServer();
         String name = Company.companyList.get(0).getName();
 
+        GetAllProducts(server, name);
+
+        return Product.prodList;
+    }
+
+    @Override
+    public List<Product> getAllProductsWithProperties(List<Property> properties) {
+        //TODO implement this so that this actually searches among properties
+        List<Product> prodList = new ArrayList<Product>();
+
+        Server server = Company.companyList.get(0).getServer();
+        String name = Company.companyList.get(0).getName();
+
+        GetAllProducts(server, name);
+
+        return prodList;
+    }
+
+    @Override
+    public Product getProductWithId(String id) {
+        Product.prodList.clear();
+
+        Server server = Company.companyList.get(0).getServer();
+        String name = Company.companyList.get(0).getName();
+
+        GetAllProducts(server, name);
+
+        //G124584
+
+        for(Product p : Product.prodList){
+            if(p.id.equalsIgnoreCase(id))
+                return p;
+        }
+
+        return null;
+    }
+
+    private void GetAllProducts(Server server, String name) {
         try (Session session = server.driver.session()) {
 
             // Auto-commit transactions are a quick and easy way to wrap a read.
@@ -59,21 +117,45 @@ public class ProductServiceImpl implements ProductService {
                 p.categories.add(n.get("typeFR").asString());
                 p.categories.add(n.get("typeNL").asString());
                 p.typeID = n.get("typeID").asString();
+                System.out.println("finished Product : " + p.id);
+            }
+        }
+    }
+
+    private List<Property> addProperties(Product p) {
+        List<Property> props = new ArrayList<Property>();
+
+        Server server = Company.companyList.get(0).getServer();
+        String name = Company.companyList.get(0).getName();
+
+        try (Session session = server.driver.session()) {
+            StatementResult result = session.run(
+                    "MATCH (p:Property) <-[hasProperty]-(a:Subject {id:'"+p.id+"'}) RETURN p");
+                    //"MATCH (a:Subject) <-[hasProduct]- (c:Company { name: '"+name+"' }) " +
+                    //        "RETURN a");
+            while (result.hasNext()) {
+                Record record = result.next();
+                Node n = record.get(0).asNode();
+                Property prop = new Property();
+                prop.id = n.get("id").asString();
+                prop.category = n.get("category").asString();
+                String externalDocument = n.get("externalDocument").asString();
+                if (externalDocument != null && !externalDocument.isEmpty() && externalDocument != "null") {
+                    prop.externalDocument = n.get("externalDocument").asString();
+                }
+                prop.name = n.get("name").asString();
+                String unit = n.get("unit").asString();
+                if (unit != null && !unit.isEmpty() && unit != "null") {
+                    prop.unit = n.get("unit").asString();
+                }
+                prop.value = n.get("value").asString();
+                props.add(prop);
             }
         }
 
-        return Product.prodList;
+        p.properties.addAll(props);
+        return props;
     }
-
-    /*private void getProductsFromCompany(String name, Server server){
-        //TODO: enable retrieving products from other companies
-        if(!name.equalsIgnoreCase("Gyproc"))
-            return;
-
-        if(server.theDBType.name.equalsIgnoreCase("neo4j")){
-
-        }
-    }*/
 }
 
 
